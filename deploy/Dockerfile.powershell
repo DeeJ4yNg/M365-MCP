@@ -1,0 +1,70 @@
+# syntax=docker/dockerfile:1.7
+# ExchangeOnlineManagement 3.10+ requires PowerShell 7.6.
+# MCR does not yet publish a 7.6 Ubuntu image, so install the official checksummed
+# PowerShell GitHub release on an Ubuntu 24.04 base.
+FROM ghcr.io/astral-sh/uv:0.12.3 AS uv
+
+FROM ubuntu:24.04 AS runtime
+
+ARG PWSH_VERSION=7.6.9
+ARG PWSH_SHA256=1da6d6d6035d651f20e70ddee7c4c15ac6ab8b9fb40ee92240d91263f28a884b
+
+USER root
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        ca-certificates \
+        curl \
+        libgssapi-krb5-2 \
+        libicu74 \
+        libssl3t64 \
+        libstdc++6 \
+        python3 \
+        python3-venv \
+        zlib1g \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN curl -fsSL \
+        -o /tmp/powershell.tar.gz \
+        "https://github.com/PowerShell/PowerShell/releases/download/v${PWSH_VERSION}/powershell-${PWSH_VERSION}-linux-x64.tar.gz" \
+    && echo "${PWSH_SHA256}  /tmp/powershell.tar.gz" | sha256sum -c - \
+    && mkdir -p /opt/microsoft/powershell/7 \
+    && tar -xzf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7 \
+    && chmod +x /opt/microsoft/powershell/7/pwsh \
+    && ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh \
+    && rm /tmp/powershell.tar.gz
+
+COPY --from=uv /uv /usr/local/bin/uv
+
+RUN pwsh -NoLogo -NoProfile -NonInteractive -Command \
+    "Set-PSRepository -Name PSGallery -InstallationPolicy Trusted; \
+     Install-Module -Name ExchangeOnlineManagement -RequiredVersion 3.10.1 -Scope AllUsers -Force -AllowClobber; \
+     Install-Module -Name MicrosoftTeams -RequiredVersion 8.0.0 -Scope AllUsers -Force -AllowClobber; \
+     Install-Module -Name PnP.PowerShell -RequiredVersion 3.4.1 -Scope AllUsers -Force -AllowClobber"
+
+RUN groupadd --gid 10001 m365 \
+    && useradd --uid 10001 --gid 10001 --create-home --home-dir /home/m365 m365
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    UV_COMPILE_BYTECODE=1 \
+    UV_LINK_MODE=copy \
+    UV_PYTHON_DOWNLOADS=never \
+    UV_PYTHON=/usr/bin/python3 \
+    M365_PWSH_PATH=/usr/bin/pwsh \
+    HOME=/tmp
+
+WORKDIR /app
+COPY pyproject.toml uv.lock README.md ./
+RUN uv sync --frozen --no-dev --no-install-project
+COPY src ./src
+COPY config ./config
+RUN uv sync --frozen --no-dev \
+    && chown -R 10001:10001 /app \
+    && chmod 755 /app/config \
+    && chmod 644 /app/config/*.json
+ENV PATH="/app/.venv/bin:${PATH}"
+
+USER 10001:10001
+EXPOSE 8001
+ENTRYPOINT []
+CMD ["m365-powershell-server"]

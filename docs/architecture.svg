@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" role="img" aria-labelledby="title desc">
+  <title id="title">M365 MCP Server architecture</title>
+  <desc id="desc">Two independent Streamable HTTP MCP servers in separate containers, protected by Entra JWT ingress and parameter-bound approval tokens, calling Microsoft Graph and PowerShell admin surfaces.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#53657a"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b54a3f"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2e7558"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#1b2b3a" flood-opacity="0.08"/>
+    </filter>
+    <style>
+      .title { font: 700 28px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #172433; }
+      .subtitle { font: 400 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #637387; }
+      .box-title { font: 700 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #172433; }
+      .strong { font: 650 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #172433; }
+      .body { font: 400 12.5px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #526274; }
+      .mono { font: 500 11.5px "SFMono-Regular", Consolas, monospace; fill: #3d4e61; }
+      .label { font: 600 11px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #66778a; letter-spacing: .2px; }
+      .zone { font: 700 12px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #7a5a16; letter-spacing: 1.1px; }
+      .capsule { font: 600 11.5px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #31485c; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="840" fill="#f7f9fb"/>
+  <rect x="0" y="0" width="1200" height="80" fill="#ffffff"/>
+  <line x1="0" y1="80" x2="1200" y2="80" stroke="#e3e9ef"/>
+  <text x="56" y="38" class="title">M365 MCP Server</text>
+  <text x="56" y="59" class="subtitle">双服务、零任意脚本、可审查写操作的 Microsoft 365 运维工具平面</text>
+  <g transform="translate(1030,26)">
+    <rect width="118" height="28" rx="14" fill="#edf6f1" stroke="#c8e5d7"/>
+    <circle cx="17" cy="14" r="4" fill="#2e7558"/>
+    <text x="28" y="18" class="capsule">Streamable HTTP</text>
+  </g>
+
+  <!-- Identity plane -->
+  <rect x="394" y="102" width="412" height="72" rx="14" fill="#fff8e8" stroke="#edd9a8" filter="url(#shadow)"/>
+  <text x="418" y="128" class="label">IDENTITY PLANE</text>
+  <text x="418" y="151" class="strong">Microsoft Entra ID</text>
+  <text x="590" y="151" class="body">App-only JWT · roles: M365.MCP.Read / ReadWrite</text>
+  <text x="418" y="166" class="body">签名、issuer、audience、tenant 与调用方 allow-list 双重校验</text>
+
+  <!-- Caller -->
+  <rect x="56" y="242" width="276" height="176" rx="16" fill="#ffffff" stroke="#dce4ec" filter="url(#shadow)"/>
+  <rect x="56" y="242" width="6" height="176" rx="3" fill="#2d6b9b"/>
+  <text x="82" y="274" class="label">CALLER</text>
+  <text x="82" y="300" class="box-title">Enterprise IT Agent</text>
+  <text x="82" y="322" class="body">独立 Agent Runtime 容器</text>
+  <rect x="82" y="338" width="218" height="50" rx="9" fill="#f4f8fb" stroke="#e0e8ef"/>
+  <text x="96" y="358" class="mono">Authorization: Bearer &lt;JWT&gt;</text>
+  <text x="96" y="376" class="mono">POST /mcp</text>
+  <text x="82" y="406" class="body">无自定义 Agent 框架依赖</text>
+
+  <!-- Approval -->
+  <rect x="868" y="96" width="276" height="100" rx="16" fill="#ffffff" stroke="#dce4ec" filter="url(#shadow)"/>
+  <rect x="868" y="96" width="6" height="100" rx="3" fill="#b54a3f"/>
+  <text x="894" y="119" class="label">SEPARATE TRUST DOMAIN</text>
+  <text x="894" y="143" class="box-title">Change / Approval System</text>
+  <text x="894" y="163" class="body">持有 RS256 私钥，MCP 只挂载公钥</text>
+  <text x="894" y="181" class="mono">action · params_sha256 · actor · jti</text>
+
+  <!-- Docker boundary -->
+  <rect x="358" y="210" width="804" height="456" rx="22" fill="#fbfcfd" stroke="#d8ad50" stroke-width="1.4" stroke-dasharray="7 5"/>
+  <rect x="378" y="228" width="265" height="25" rx="7" fill="#fff4d8"/>
+  <text x="390" y="245" class="zone">LINUX DOCKER HOST · NON-ROOT</text>
+
+  <!-- Graph server -->
+  <rect x="386" y="270" width="352" height="286" rx="14" fill="#ffffff" stroke="#dce4ec" filter="url(#shadow)"/>
+  <rect x="386" y="270" width="352" height="50" rx="14" fill="#eff6fb"/>
+  <path d="M386 306 H738 V320 H386 Z" fill="#eff6fb"/>
+  <circle cx="410" cy="295" r="8" fill="#2d6b9b"/>
+  <text x="428" y="292" class="box-title">graph-mcp</text>
+  <text x="428" y="309" class="mono">Python · FastMCP · :8000</text>
+  <text x="406" y="342" class="label">MCP SURFACE</text>
+  <g transform="translate(406,352)">
+    <rect width="312" height="54" rx="8" fill="#f7fafc" stroke="#e5ebf1"/>
+    <text x="12" y="20" class="mono">search_actions · describe_action</text>
+    <text x="12" y="40" class="mono">execute_read · execute_write · inventory</text>
+  </g>
+  <text x="406" y="430" class="label">EXECUTION</text>
+  <text x="406" y="450" class="body">固定 Graph endpoint + JSON Schema</text>
+  <text x="406" y="469" class="body">参数绑定审批 · GET 有界重试 · nextLink 同源校验</text>
+  <text x="406" y="488" class="body">证书 App-only · 响应大小上限</text>
+  <g transform="translate(406,508)">
+    <rect width="138" height="26" rx="13" fill="#edf6f1"/>
+    <text x="12" y="18" class="capsule">Graph v1.0 only</text>
+    <rect x="150" width="142" height="26" rx="13" fill="#fff5e9"/>
+    <text x="162" y="18" class="capsule">181 actions pending review</text>
+  </g>
+
+  <!-- PowerShell server -->
+  <rect x="774" y="270" width="352" height="286" rx="14" fill="#ffffff" stroke="#dce4ec" filter="url(#shadow)"/>
+  <rect x="774" y="270" width="352" height="50" rx="14" fill="#eef7f3"/>
+  <path d="M774 306 H1126 V320 H774 Z" fill="#eef7f3"/>
+  <circle cx="798" cy="295" r="8" fill="#2e7558"/>
+  <text x="816" y="292" class="box-title">powershell-mcp</text>
+  <text x="816" y="309" class="mono">Python + pwsh 7.6 · :8001</text>
+  <text x="794" y="342" class="label">MCP SURFACE</text>
+  <g transform="translate(794,352)">
+    <rect width="312" height="54" rx="8" fill="#f7fafc" stroke="#e5ebf1"/>
+    <text x="12" y="20" class="mono">search_actions · describe_action</text>
+    <text x="12" y="40" class="mono">execute_read · execute_write · inventory</text>
+  </g>
+  <text x="794" y="430" class="label">EXECUTION</text>
+  <text x="794" y="450" class="body">固定 cmdlet 白名单 · 每次调用独立进程</text>
+  <text x="794" y="469" class="body">JSON stdin · 无 Invoke-Expression · 超时杀进程组</text>
+  <text x="794" y="488" class="body">证书连接 EXO / Teams / SharePoint PnP</text>
+  <g transform="translate(794,508)">
+    <rect width="138" height="26" rx="13" fill="#edf6f1"/>
+    <text x="12" y="18" class="capsule">PowerShell 7.6</text>
+    <rect x="150" width="142" height="26" rx="13" fill="#fff5e9"/>
+    <text x="162" y="18" class="capsule">117 actions pending review</text>
+  </g>
+
+  <!-- State -->
+  <rect x="470" y="582" width="270" height="62" rx="11" fill="#ffffff" stroke="#dce4ec"/>
+  <text x="486" y="604" class="strong">Review + enabledTools</text>
+  <text x="486" y="623" class="body">共享配置卷 · 热加载 · 默认全部关闭</text>
+  <rect x="758" y="582" width="316" height="62" rx="11" fill="#ffffff" stroke="#dce4ec"/>
+  <text x="774" y="604" class="strong">Valkey · AOF</text>
+  <text x="774" y="623" class="body">原子占用 jti，跨副本防重放</text>
+
+  <!-- Upstream -->
+  <rect x="56" y="704" width="286" height="94" rx="13" fill="#ffffff" stroke="#dce4ec"/>
+  <text x="76" y="731" class="strong">Microsoft Graph</text>
+  <text x="76" y="751" class="body">Entra · Intune · SharePoint · OneDrive</text>
+  <text x="76" y="770" class="body">Teams · reports · service health</text>
+  <rect x="356" y="704" width="230" height="94" rx="13" fill="#ffffff" stroke="#dce4ec"/>
+  <text x="376" y="731" class="strong">Exchange Online</text>
+  <text x="376" y="751" class="body">Mailboxes · mail flow</text>
+  <text x="376" y="770" class="body">Trace · permissions · quarantine</text>
+  <rect x="600" y="704" width="240" height="94" rx="13" fill="#ffffff" stroke="#dce4ec"/>
+  <text x="620" y="731" class="strong">Security &amp; Compliance</text>
+  <text x="620" y="751" class="body">Purview · DLP · retention</text>
+  <text x="620" y="770" class="body">Unified audit log</text>
+  <rect x="854" y="704" width="290" height="94" rx="13" fill="#ffffff" stroke="#dce4ec"/>
+  <text x="874" y="731" class="strong">Teams &amp; SharePoint admin</text>
+  <text x="874" y="751" class="body">Teams policies · site collections</text>
+  <text x="874" y="770" class="body">PnP tenant administration</text>
+
+  <!-- Arrows -->
+  <path d="M332 318 H378" stroke="#53657a" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+  <text x="337" y="307" class="label">JWT</text>
+  <path d="M1006 196 V220" stroke="#b54a3f" stroke-width="1.7" stroke-dasharray="5 4" fill="none" marker-end="url(#arrow-red)"/>
+  <g transform="translate(900,226)">
+    <rect width="212" height="26" rx="13" fill="#fdf5f3" stroke="#f0d8d3"/>
+    <text x="12" y="18" class="capsule">single-use confirmation JWT</text>
+  </g>
+  <path d="M562 556 V574" stroke="#53657a" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M916 556 V574" stroke="#53657a" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M386 500 H346 V760 H342" stroke="#53657a" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M774 500 H750 V690 H500 V698" stroke="#53657a" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M650 556 V690 H660 V698" stroke="#53657a" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1126 500 H1138 V680 H1000 V698" stroke="#2e7558" stroke-width="1.5" fill="none" marker-end="url(#arrow-green)"/>
+
+  <text x="56" y="818" class="body">Ingress tokens are never passed through to Microsoft. Both servers use independent upstream app identities and least-privilege certificates.</text>
+</svg>

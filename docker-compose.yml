@@ -1,0 +1,219 @@
+name: m365-mcp
+
+x-security: &security
+  restart: unless-stopped
+  read_only: true
+  cap_drop:
+    - ALL
+  security_opt:
+    - no-new-privileges:true
+  tmpfs:
+    - /tmp:rw,noexec,nosuid,size=64m
+
+x-common-env: &common-env
+  MCP_AUTH_MODE: jwt
+  MCP_HOST: 0.0.0.0
+  MCP_ALLOW_INSECURE_DEV: "false"
+  MCP_LOG_LEVEL: ${MCP_LOG_LEVEL:-INFO}
+  MCP_MAX_RESULT_BYTES: ${MCP_MAX_RESULT_BYTES:-1000000}
+  MCP_MAX_PAGES: ${MCP_MAX_PAGES:-5}
+  MCP_REQUEST_TIMEOUT_SECONDS: ${MCP_REQUEST_TIMEOUT_SECONDS:-30}
+  MCP_SEARCH_MODE: ${MCP_SEARCH_MODE:-lexical}
+  MCP_SEARCH_EMBEDDING_URL: ${MCP_SEARCH_EMBEDDING_URL:-}
+  MCP_SEARCH_EMBEDDING_API_KEY: ${MCP_SEARCH_EMBEDDING_API_KEY:-}
+  MCP_SEARCH_EMBEDDING_MODEL: ${MCP_SEARCH_EMBEDDING_MODEL:-Qwen/Qwen3-Embedding-0.6B}
+  MCP_SEARCH_EMBEDDING_DIMENSION: ${MCP_SEARCH_EMBEDDING_DIMENSION:-}
+  MCP_SEARCH_EMBEDDING_HEALTH_URL: ${MCP_SEARCH_EMBEDDING_HEALTH_URL:-}
+  MCP_SEARCH_QUERY_INSTRUCTION: ${MCP_SEARCH_QUERY_INSTRUCTION:-}
+  MCP_SEARCH_QUERY_PREFIX: ${MCP_SEARCH_QUERY_PREFIX:-}
+  MCP_SEARCH_PASSAGE_PREFIX: ${MCP_SEARCH_PASSAGE_PREFIX:-}
+  MCP_SEARCH_BATCH_SIZE: ${MCP_SEARCH_BATCH_SIZE:-32}
+  MCP_SEARCH_TIMEOUT_SECONDS: ${MCP_SEARCH_TIMEOUT_SECONDS:-10}
+  MCP_SEARCH_SEMANTIC_WEIGHT: ${MCP_SEARCH_SEMANTIC_WEIGHT:-0.55}
+  MCP_SEARCH_LEXICAL_WEIGHT: ${MCP_SEARCH_LEXICAL_WEIGHT:-0.45}
+  MCP_SEARCH_SEMANTIC_FLOOR: ${MCP_SEARCH_SEMANTIC_FLOOR:-0.30}
+  MCP_SEARCH_SEMANTIC_CEILING: ${MCP_SEARCH_SEMANTIC_CEILING:-0.95}
+  MCP_SEARCH_MIN_SCORE: ${MCP_SEARCH_MIN_SCORE:-0.05}
+  MCP_SEARCH_LEXICAL_SCALE: ${MCP_SEARCH_LEXICAL_SCALE:-25}
+  MCP_SEARCH_CACHE_SIZE: ${MCP_SEARCH_CACHE_SIZE:-256}
+  MCP_SEARCH_FALLBACK_TO_LEXICAL: ${MCP_SEARCH_FALLBACK_TO_LEXICAL:-false}
+  MCP_SEARCH_VERIFY_RESPONSE_MODEL: ${MCP_SEARCH_VERIFY_RESPONSE_MODEL:-false}
+  MCP_ENABLED_TOOLS_PATH: /app/config/enabledTools.json
+  MCP_REVIEW_REGISTRY_PATH: /app/config/review-registry.json
+  MCP_CONFIRMATION_ENABLED: "true"
+  MCP_CONFIRMATION_ALGORITHM: RS256
+  MCP_CONFIRMATION_PUBLIC_KEY_PATH: /run/secrets/confirmation_public
+  MCP_CONFIRMATION_ISSUER: ${MCP_CONFIRMATION_ISSUER:-m365-change-approval}
+  MCP_CONFIRMATION_MAX_TTL_SECONDS: ${MCP_CONFIRMATION_MAX_TTL_SECONDS:-900}
+  MCP_CONFIRMATION_LEEWAY_SECONDS: ${MCP_CONFIRMATION_LEEWAY_SECONDS:-15}
+  MCP_CONFIRMATION_REDIS_URL: redis://valkey:6379/0
+  M365_TENANT_ID: ${M365_TENANT_ID}
+  M365_ORGANIZATION: ${M365_ORGANIZATION}
+  M365_SHAREPOINT_ADMIN_URL: ${M365_SHAREPOINT_ADMIN_URL}
+
+services:
+  valkey:
+    image: valkey/valkey:8.1-alpine
+    restart: unless-stopped
+    command:
+      - valkey-server
+      - --appendonly
+      - "yes"
+      - --appendfsync
+      - everysec
+      - --dir
+      - /data
+      - --maxmemory
+      - 64mb
+      - --maxmemory-policy
+      - allkeys-lru
+    volumes:
+      - valkey-data:/data
+    networks:
+      - mcp-backend
+    healthcheck:
+      test: ["CMD", "valkey-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  graph-mcp:
+    <<: *security
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.graph
+      target: runtime
+    environment:
+      <<: *common-env
+      MCP_PORT: "8000"
+      MCP_ALLOWED_HOSTS: ${GRAPH_MCP_ALLOWED_HOSTS:-graph-mcp,localhost,127.0.0.1}
+      MCP_ALLOWED_ORIGINS: ${MCP_ALLOWED_ORIGINS:-}
+      MCP_GRAPH_ENTRY_TENANT_ID: ${MCP_ENTRY_TENANT_ID}
+      MCP_GRAPH_AUDIENCE: ${MCP_GRAPH_AUDIENCE:-api://m365-graph-mcp}
+      MCP_GRAPH_ALLOWED_CLIENT_IDS: ${MCP_ALLOWED_CLIENT_IDS}
+      MCP_GRAPH_WRITE_ROLES: ${MCP_WRITE_ROLES:-M365.MCP.ReadWrite}
+      MCP_GRAPH_READ_ROLES: ${MCP_READ_ROLES:-M365.MCP.Read,M365.MCP.ReadWrite}
+      MCP_CONFIRMATION_AUDIENCE: m365-graph-mcp
+      M365_GRAPH_CLIENT_ID: ${M365_GRAPH_CLIENT_ID}
+      M365_GRAPH_CERTIFICATE_PATH: /run/secrets/graph_pfx
+      M365_GRAPH_CERTIFICATE_PASSWORD_FILE: /run/secrets/graph_pfx_password
+      M365_GRAPH_BASE_URL: https://graph.microsoft.com/v1.0
+    volumes:
+      - ./config:/app/config:ro
+    secrets:
+      - graph_pfx
+      - graph_pfx_password
+      - confirmation_public
+    ports:
+      - "127.0.0.1:${GRAPH_MCP_PORT:-8000}:8000"
+    depends_on:
+      valkey:
+        condition: service_healthy
+    networks:
+      - m365-mcp
+      - mcp-backend
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz', timeout=3)"
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  powershell-mcp:
+    <<: *security
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.powershell
+    environment:
+      <<: *common-env
+      MCP_PORT: "8001"
+      MCP_ALLOWED_HOSTS: ${POWERSHELL_MCP_ALLOWED_HOSTS:-powershell-mcp,localhost,127.0.0.1}
+      MCP_ALLOWED_ORIGINS: ${MCP_ALLOWED_ORIGINS:-}
+      MCP_POWERSHELL_ENTRY_TENANT_ID: ${MCP_ENTRY_TENANT_ID}
+      MCP_POWERSHELL_AUDIENCE: ${MCP_POWERSHELL_AUDIENCE:-api://m365-powershell-mcp}
+      MCP_POWERSHELL_ALLOWED_CLIENT_IDS: ${MCP_ALLOWED_CLIENT_IDS}
+      MCP_POWERSHELL_WRITE_ROLES: ${MCP_WRITE_ROLES:-M365.MCP.ReadWrite}
+      MCP_POWERSHELL_READ_ROLES: ${MCP_READ_ROLES:-M365.MCP.Read,M365.MCP.ReadWrite}
+      MCP_CONFIRMATION_AUDIENCE: m365-powershell-mcp
+      M365_POWERSHELL_CLIENT_ID: ${M365_POWERSHELL_CLIENT_ID}
+      M365_POWERSHELL_CERTIFICATE_PATH: /run/secrets/powershell_pfx
+      M365_POWERSHELL_CERTIFICATE_PASSWORD_FILE: /run/secrets/powershell_pfx_password
+      M365_PS_WORKER_TIMEOUT_SECONDS: ${M365_PS_WORKER_TIMEOUT_SECONDS:-120}
+      M365_PS_MAX_CONCURRENCY: ${M365_PS_MAX_CONCURRENCY:-4}
+      HOME: /tmp
+    volumes:
+      - ./config:/app/config:ro
+    secrets:
+      - powershell_pfx
+      - powershell_pfx_password
+      - confirmation_public
+    ports:
+      - "127.0.0.1:${POWERSHELL_MCP_PORT:-8001}:8001"
+    depends_on:
+      valkey:
+        condition: service_healthy
+    networks:
+      - m365-mcp
+      - mcp-backend
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/healthz', timeout=3)"
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+  agent-smoke:
+    profiles: ["smoke"]
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.graph
+      target: agent
+    environment:
+      MCP_GRAPH_URL: http://graph-mcp:8000/mcp
+      MCP_POWERSHELL_URL: http://powershell-mcp:8001/mcp
+      MCP_GRAPH_BEARER_TOKEN: ${SMOKE_GRAPH_ACCESS_TOKEN:-}
+      MCP_POWERSHELL_BEARER_TOKEN: ${SMOKE_POWERSHELL_ACCESS_TOKEN:-}
+    depends_on:
+      graph-mcp:
+        condition: service_healthy
+      powershell-mcp:
+        condition: service_healthy
+    networks:
+      - m365-mcp
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=16m
+
+networks:
+  m365-mcp:
+    driver: bridge
+  mcp-backend:
+    driver: bridge
+    internal: true
+
+volumes:
+  valkey-data:
+
+secrets:
+  graph_pfx:
+    file: ./secrets/graph.pfx
+  graph_pfx_password:
+    file: ./secrets/graph.pfx.password
+  powershell_pfx:
+    file: ./secrets/powershell.pfx
+  powershell_pfx_password:
+    file: ./secrets/powershell.pfx.password
+  confirmation_public:
+    file: ./secrets/confirmation_public.pem

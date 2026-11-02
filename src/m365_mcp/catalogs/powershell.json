@@ -1,0 +1,5722 @@
+[
+  {
+    "name": "list_exchange_mailboxes",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "分页列出 Exchange Online 邮箱，用于邮箱资产盘点。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mailbox",
+      "list",
+      "inventory"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-exomailbox?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "result_size": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000,
+          "description": "最多返回的邮箱数量，范围为 1 到 1000。"
+        }
+      },
+      "required": [
+        "result_size"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-EXOMailbox",
+      "parameters": {
+        "result_size": "ResultSize"
+      }
+    }
+  },
+  {
+    "name": "get_exchange_mailbox",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取指定 Exchange Online 邮箱的核心配置。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mailbox",
+      "get"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-exomailbox?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "邮箱的别名、SMTP 地址、用户主体名称或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-EXOMailbox",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "get_exchange_mailbox_statistics",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取邮箱容量、项目数和最后登录等统计信息。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mailbox",
+      "statistics",
+      "storage"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-exomailboxstatistics?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要读取统计信息的邮箱标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-EXOMailboxStatistics",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "get_exchange_mailbox_folder_statistics",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取指定邮箱各文件夹的项目数和容量统计。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mailbox",
+      "folder",
+      "statistics"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-exomailboxfolderstatistics?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要读取文件夹统计信息的邮箱标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-EXOMailboxFolderStatistics",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "get_exchange_recipient",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取邮箱、邮件用户、联系人或组的收件人属性。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "recipient",
+      "directory"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-exorecipient?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "Exchange 收件人的名称、SMTP 地址或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-EXORecipient",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "get_mailbox_permissions",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "列出指定邮箱的显式访问权限，用于权限审计。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mailbox",
+      "permissions",
+      "audit"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-mailboxpermission?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要审计权限的邮箱标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-MailboxPermission",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "add_mailbox_full_access_permission",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "向指定安全主体授予邮箱完全访问权限，并禁用自动映射。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mailbox",
+      "full access",
+      "permission"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/add-mailboxpermission?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "被授权的邮箱标识。"
+        },
+        "user": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "获得权限的用户或安全组标识。"
+        }
+      },
+      "required": [
+        "identity",
+        "user"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Add-MailboxPermission",
+      "parameters": {
+        "identity": "Identity",
+        "user": "User"
+      },
+      "constant_parameters": {
+        "AccessRights": "FullAccess",
+        "AutoMapping": false,
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "remove_mailbox_full_access_permission",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "移除指定安全主体对邮箱的完全访问权限。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mailbox",
+      "full access",
+      "revoke"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/remove-mailboxpermission?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要撤销权限的邮箱标识。"
+        },
+        "user": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "被撤销权限的用户或安全组标识。"
+        }
+      },
+      "required": [
+        "identity",
+        "user"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Remove-MailboxPermission",
+      "parameters": {
+        "identity": "Identity",
+        "user": "User"
+      },
+      "constant_parameters": {
+        "AccessRights": "FullAccess",
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "get_send_as_permissions",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取收件人的 Send As 权限，用于委派审计。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "send as",
+      "permission",
+      "audit"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-recipientpermission?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要审计 Send As 权限的收件人标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-RecipientPermission",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "add_send_as_permission",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "授予指定受托人以收件人身份发送邮件的权限。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "send as",
+      "delegate",
+      "grant"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/add-recipientpermission?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "被委派发送身份的收件人标识。"
+        },
+        "trustee": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "获得 Send As 权限的用户或组标识。"
+        }
+      },
+      "required": [
+        "identity",
+        "trustee"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Add-RecipientPermission",
+      "parameters": {
+        "identity": "Identity",
+        "trustee": "Trustee"
+      },
+      "constant_parameters": {
+        "AccessRights": "SendAs",
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "remove_send_as_permission",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "撤销指定受托人的 Send As 权限。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "send as",
+      "delegate",
+      "revoke"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/remove-recipientpermission?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要撤销发送身份委派的收件人标识。"
+        },
+        "trustee": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "被撤销 Send As 权限的用户或组标识。"
+        }
+      },
+      "required": [
+        "identity",
+        "trustee"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Remove-RecipientPermission",
+      "parameters": {
+        "identity": "Identity",
+        "trustee": "Trustee"
+      },
+      "constant_parameters": {
+        "AccessRights": "SendAs",
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "set_mailbox_hidden_from_address_lists",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "控制邮箱是否在 Exchange 地址列表中隐藏。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mailbox",
+      "address list",
+      "hidden"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/set-mailbox?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要修改地址列表可见性的邮箱标识。"
+        },
+        "hidden": {
+          "type": "boolean",
+          "description": "true 表示隐藏，false 表示显示。"
+        }
+      },
+      "required": [
+        "identity",
+        "hidden"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Set-Mailbox",
+      "parameters": {
+        "identity": "Identity",
+        "hidden": "HiddenFromAddressListsEnabled"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "set_mailbox_forwarding",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "将邮箱邮件转发到指定 SMTP 地址，并设置是否保留本地副本。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mailbox",
+      "forwarding",
+      "mail flow"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/set-mailbox?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要配置转发的邮箱标识。"
+        },
+        "forwarding_smtp_address": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 320,
+          "description": "接收转发邮件的 SMTP 地址。"
+        },
+        "deliver_to_mailbox_and_forward": {
+          "type": "boolean",
+          "description": "是否同时在原邮箱保留邮件副本。"
+        }
+      },
+      "required": [
+        "identity",
+        "forwarding_smtp_address",
+        "deliver_to_mailbox_and_forward"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Set-Mailbox",
+      "parameters": {
+        "identity": "Identity",
+        "forwarding_smtp_address": "ForwardingSmtpAddress",
+        "deliver_to_mailbox_and_forward": "DeliverToMailboxAndForward"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "get_mailbox_auto_reply_configuration",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取邮箱的自动答复和外出办公配置。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mailbox",
+      "automatic replies",
+      "oof"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-mailboxautoreplyconfiguration?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要读取自动答复配置的邮箱标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-MailboxAutoReplyConfiguration",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "set_mailbox_automatic_replies",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "启用或停用邮箱自动答复，并设置内部和外部答复内容。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mailbox",
+      "automatic replies",
+      "oof"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/set-mailboxautoreplyconfiguration?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要配置自动答复的邮箱标识。"
+        },
+        "auto_reply_state": {
+          "type": "string",
+          "enum": [
+            "Disabled",
+            "Enabled"
+          ],
+          "description": "自动答复状态；此动作不设置计划时间。"
+        },
+        "internal_message": {
+          "type": "string",
+          "maxLength": 10000,
+          "description": "发送给组织内部发件人的答复内容。"
+        },
+        "external_message": {
+          "type": "string",
+          "maxLength": 10000,
+          "description": "发送给组织外部发件人的答复内容。"
+        },
+        "external_audience": {
+          "type": "string",
+          "enum": [
+            "None",
+            "Known",
+            "All"
+          ],
+          "description": "外部答复受众：无、仅联系人或所有人。"
+        }
+      },
+      "required": [
+        "identity",
+        "auto_reply_state",
+        "internal_message",
+        "external_message",
+        "external_audience"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Set-MailboxAutoReplyConfiguration",
+      "parameters": {
+        "identity": "Identity",
+        "auto_reply_state": "AutoReplyState",
+        "internal_message": "InternalMessage",
+        "external_message": "ExternalMessage",
+        "external_audience": "ExternalAudience"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "get_calendar_processing",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取资源邮箱的日历处理和会议预订策略。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "calendar",
+      "resource mailbox",
+      "booking"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-calendarprocessing?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "会议室或设备等资源邮箱标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-CalendarProcessing",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "set_room_mailbox_booking_window",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "设置会议室邮箱允许提前预订的天数。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "room mailbox",
+      "booking window",
+      "calendar"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/set-calendarprocessing?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要配置的会议室邮箱标识。"
+        },
+        "booking_window_days": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1080,
+          "description": "允许提前预订的天数，范围为 0 到 1080。"
+        }
+      },
+      "required": [
+        "identity",
+        "booking_window_days"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Set-CalendarProcessing",
+      "parameters": {
+        "identity": "Identity",
+        "booking_window_days": "BookingWindowInDays"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "get_distribution_group",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取指定通讯组的邮件和成员管理配置。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "distribution group",
+      "get"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-distributiongroup?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "通讯组的名称、别名、SMTP 地址或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-DistributionGroup",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "list_distribution_groups",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "分页列出 Exchange Online 通讯组。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "distribution group",
+      "list"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-distributiongroup?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "result_size": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000,
+          "description": "最多返回的通讯组数量，范围为 1 到 1000。"
+        }
+      },
+      "required": [
+        "result_size"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-DistributionGroup",
+      "parameters": {
+        "result_size": "ResultSize"
+      }
+    }
+  },
+  {
+    "name": "create_distribution_group",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "创建具有指定别名和主 SMTP 地址的通讯组。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "distribution group",
+      "create"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/new-distributiongroup?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "通讯组显示名称。"
+        },
+        "alias": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z0-9._-]+$",
+          "description": "通讯组唯一别名，仅允许字母、数字、点、下划线和连字符。"
+        },
+        "primary_smtp_address": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 320,
+          "description": "通讯组主 SMTP 地址。"
+        }
+      },
+      "required": [
+        "name",
+        "alias",
+        "primary_smtp_address"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "New-DistributionGroup",
+      "parameters": {
+        "name": "Name",
+        "alias": "Alias",
+        "primary_smtp_address": "PrimarySmtpAddress"
+      },
+      "constant_parameters": {
+        "Type": "Distribution",
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "delete_distribution_group",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "删除指定 Exchange Online 通讯组。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "distribution group",
+      "delete"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/remove-distributiongroup?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要删除的通讯组标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Remove-DistributionGroup",
+      "parameters": {
+        "identity": "Identity"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "set_distribution_group_sender_authentication",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "设置通讯组是否仅接受经过身份验证的内部发件人邮件。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "distribution group",
+      "sender authentication"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/set-distributiongroup?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要配置的通讯组标识。"
+        },
+        "require_sender_authentication": {
+          "type": "boolean",
+          "description": "true 表示仅接受内部已验证发件人，false 表示也允许外部发件人。"
+        }
+      },
+      "required": [
+        "identity",
+        "require_sender_authentication"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Set-DistributionGroup",
+      "parameters": {
+        "identity": "Identity",
+        "require_sender_authentication": "RequireSenderAuthenticationEnabled"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "get_distribution_group_members",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "分页列出通讯组成员。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "distribution group",
+      "members"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-distributiongroupmember?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要列出成员的通讯组标识。"
+        },
+        "result_size": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000,
+          "description": "最多返回的成员数量，范围为 1 到 1000。"
+        }
+      },
+      "required": [
+        "identity",
+        "result_size"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-DistributionGroupMember",
+      "parameters": {
+        "identity": "Identity",
+        "result_size": "ResultSize"
+      }
+    }
+  },
+  {
+    "name": "add_distribution_group_member",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "将收件人添加到通讯组。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "distribution group",
+      "member",
+      "add"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/add-distributiongroupmember?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "目标通讯组标识。"
+        },
+        "member": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要添加的邮箱、邮件用户、联系人或其他收件人标识。"
+        }
+      },
+      "required": [
+        "identity",
+        "member"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Add-DistributionGroupMember",
+      "parameters": {
+        "identity": "Identity",
+        "member": "Member"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "remove_distribution_group_member",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "从通讯组移除指定成员。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "distribution group",
+      "member",
+      "remove"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/remove-distributiongroupmember?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "目标通讯组标识。"
+        },
+        "member": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要移除的通讯组成员标识。"
+        }
+      },
+      "required": [
+        "identity",
+        "member"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Remove-DistributionGroupMember",
+      "parameters": {
+        "identity": "Identity",
+        "member": "Member"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "get_mail_contact",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取外部邮件联系人的 Exchange 属性。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mail contact",
+      "external recipient"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-mailcontact?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "邮件联系人的名称、别名、SMTP 地址或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-MailContact",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "create_mail_contact",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "为外部收件人创建 Exchange 邮件联系人。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mail contact",
+      "create"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/new-mailcontact?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "邮件联系人显示名称。"
+        },
+        "external_email_address": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 320,
+          "description": "联系人的外部电子邮件地址。"
+        },
+        "alias": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z0-9._-]+$",
+          "description": "可选唯一别名，仅允许字母、数字、点、下划线和连字符。"
+        }
+      },
+      "required": [
+        "name",
+        "external_email_address"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "New-MailContact",
+      "parameters": {
+        "name": "Name",
+        "external_email_address": "ExternalEmailAddress",
+        "alias": "Alias"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "delete_mail_contact",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "删除指定 Exchange 邮件联系人。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mail contact",
+      "delete"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/remove-mailcontact?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要删除的邮件联系人标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Remove-MailContact",
+      "parameters": {
+        "identity": "Identity"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "set_mail_contact_hidden",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "控制邮件联系人是否在地址列表中隐藏。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mail contact",
+      "hidden",
+      "address list"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/set-mailcontact?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要修改的邮件联系人标识。"
+        },
+        "hidden": {
+          "type": "boolean",
+          "description": "true 表示从地址列表隐藏，false 表示显示。"
+        }
+      },
+      "required": [
+        "identity",
+        "hidden"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Set-MailContact",
+      "parameters": {
+        "identity": "Identity",
+        "hidden": "HiddenFromAddressListsEnabled"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "get_mail_user",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取具有外部邮件地址的邮件用户属性。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mail user",
+      "external email"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-mailuser?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "邮件用户的名称、别名、SMTP 地址或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-MailUser",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "create_mail_user",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "创建使用外部电子邮件地址的 Exchange 邮件用户。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mail user",
+      "create"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/new-mailuser?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "邮件用户显示名称。"
+        },
+        "alias": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z0-9._-]+$",
+          "description": "邮件用户唯一别名，仅允许字母、数字、点、下划线和连字符。"
+        },
+        "external_email_address": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 320,
+          "description": "邮件用户的外部电子邮件地址。"
+        }
+      },
+      "required": [
+        "name",
+        "alias",
+        "external_email_address"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "New-MailUser",
+      "parameters": {
+        "name": "Name",
+        "alias": "Alias",
+        "external_email_address": "ExternalEmailAddress"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "delete_mail_user",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "删除指定 Exchange 邮件用户。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mail user",
+      "delete"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/remove-mailuser?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要删除的邮件用户标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Remove-MailUser",
+      "parameters": {
+        "identity": "Identity"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "list_accepted_domains",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "列出 Exchange Online 组织的接受域及其类型。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "accepted domain",
+      "mail flow"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-accepteddomain?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {}
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-AcceptedDomain"
+    }
+  },
+  {
+    "name": "set_accepted_domain_type",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "将接受域配置为权威域或内部中继域。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "accepted domain",
+      "authoritative",
+      "internal relay"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/set-accepteddomain?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 255,
+          "description": "接受域名称或对象标识。"
+        },
+        "domain_type": {
+          "type": "string",
+          "enum": [
+            "Authoritative",
+            "InternalRelay"
+          ],
+          "description": "接受域类型：权威或内部中继。"
+        }
+      },
+      "required": [
+        "identity",
+        "domain_type"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Set-AcceptedDomain",
+      "parameters": {
+        "identity": "Identity",
+        "domain_type": "DomainType"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "get_remote_domain",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取发往远程域的邮件格式和自动答复策略。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "remote domain",
+      "mail flow"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-remotedomain?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 255,
+          "description": "远程域名称或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-RemoteDomain",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "set_remote_domain_allowed_oof",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "设置允许发送到远程域的外出答复类型。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "remote domain",
+      "oof",
+      "automatic replies"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/set-remotedomain?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 255,
+          "description": "要配置的远程域名称或对象标识。"
+        },
+        "allowed_oof_type": {
+          "type": "string",
+          "enum": [
+            "None",
+            "External",
+            "InternalLegacy",
+            "ExternalLegacy"
+          ],
+          "description": "允许的外出答复类型。"
+        }
+      },
+      "required": [
+        "identity",
+        "allowed_oof_type"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Set-RemoteDomain",
+      "parameters": {
+        "identity": "Identity",
+        "allowed_oof_type": "AllowedOOFType"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "list_transport_rules",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "列出组织邮件流规则及其状态和优先级。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "transport rule",
+      "mail flow"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-transportrule?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {}
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-TransportRule"
+    }
+  },
+  {
+    "name": "enable_transport_rule",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "启用指定 Exchange Online 邮件流规则。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "transport rule",
+      "enable"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/enable-transportrule?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "要启用的邮件流规则名称或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Enable-TransportRule",
+      "parameters": {
+        "identity": "Identity"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "disable_transport_rule",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "停用指定 Exchange Online 邮件流规则。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "transport rule",
+      "disable"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/disable-transportrule?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "要停用的邮件流规则名称或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Disable-TransportRule",
+      "parameters": {
+        "identity": "Identity"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "set_transport_rule_comments",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "更新邮件流规则的管理注释和变更说明。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "transport rule",
+      "comments",
+      "change management"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/set-transportrule?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "要更新的邮件流规则名称或对象标识。"
+        },
+        "comments": {
+          "type": "string",
+          "maxLength": 10240,
+          "description": "写入规则的管理注释。"
+        }
+      },
+      "required": [
+        "identity",
+        "comments"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Set-TransportRule",
+      "parameters": {
+        "identity": "Identity",
+        "comments": "Comments"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "get_outbound_connector",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取 Exchange Online 出站连接器的邮件路由配置。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "outbound connector",
+      "mail flow"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-outboundconnector?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "出站连接器名称或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-OutboundConnector",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "set_outbound_connector_enabled",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "启用或停用指定 Exchange Online 出站连接器。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "outbound connector",
+      "enable",
+      "disable"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/set-outboundconnector?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "要修改的出站连接器名称或对象标识。"
+        },
+        "enabled": {
+          "type": "boolean",
+          "description": "true 表示启用连接器，false 表示停用。"
+        }
+      },
+      "required": [
+        "identity",
+        "enabled"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Set-OutboundConnector",
+      "parameters": {
+        "identity": "Identity",
+        "enabled": "Enabled"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "trace_exchange_messages",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "按时间范围及可选收发件人查询 Exchange Online 邮件跟踪记录。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "message trace",
+      "mail flow",
+      "investigation"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-messagetrace?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "查询开始时间，使用 ISO 8601 日期时间格式。"
+        },
+        "end_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "查询结束时间，使用 ISO 8601 日期时间格式。"
+        },
+        "sender_address": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 320,
+          "description": "可选发件人 SMTP 地址。"
+        },
+        "recipient_address": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 320,
+          "description": "可选收件人 SMTP 地址。"
+        },
+        "page_size": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5000,
+          "description": "每页返回记录数，范围为 1 到 5000。"
+        }
+      },
+      "required": [
+        "start_date",
+        "end_date",
+        "page_size"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-MessageTrace",
+      "parameters": {
+        "start_date": "StartDate",
+        "end_date": "EndDate",
+        "sender_address": "SenderAddress",
+        "recipient_address": "RecipientAddress",
+        "page_size": "PageSize"
+      }
+    }
+  },
+  {
+    "name": "list_quarantine_messages",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "按接收时间范围列出 Exchange Online 隔离邮件。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Security Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "quarantine",
+      "message",
+      "security"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-quarantinemessage?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start_received_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "邮件接收时间查询起点，使用 ISO 8601 日期时间格式。"
+        },
+        "end_received_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "邮件接收时间查询终点，使用 ISO 8601 日期时间格式。"
+        },
+        "recipient_address": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 320,
+          "description": "可选收件人 SMTP 地址筛选条件。"
+        },
+        "page_size": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000,
+          "description": "每页返回记录数，范围为 1 到 1000。"
+        }
+      },
+      "required": [
+        "start_received_date",
+        "end_received_date",
+        "page_size"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-QuarantineMessage",
+      "parameters": {
+        "start_received_date": "StartReceivedDate",
+        "end_received_date": "EndReceivedDate",
+        "recipient_address": "RecipientAddress",
+        "page_size": "PageSize"
+      }
+    }
+  },
+  {
+    "name": "preview_quarantine_message",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "预览指定隔离邮件的原文和安全分析信息。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Security Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "quarantine",
+      "preview",
+      "security"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/preview-quarantinemessage?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512,
+          "description": "隔离邮件的唯一标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Preview-QuarantineMessage",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "release_quarantine_message",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "释放指定隔离邮件给全部原始收件人。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Security Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "quarantine",
+      "release",
+      "security"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/release-quarantinemessage?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512,
+          "description": "要释放的隔离邮件唯一标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Release-QuarantineMessage",
+      "parameters": {
+        "identity": "Identity"
+      },
+      "constant_parameters": {
+        "ReleaseToAll": true,
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "search_exchange_admin_audit_log",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "按时间、管理员和 cmdlet 筛选 Exchange 管理员审计日志。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "admin audit log",
+      "audit",
+      "investigation"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/search-adminauditlog?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "审计查询开始时间，使用 ISO 8601 日期时间格式。"
+        },
+        "end_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "审计查询结束时间，使用 ISO 8601 日期时间格式。"
+        },
+        "user_ids": {
+          "type": "array",
+          "maxItems": 50,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 320
+          },
+          "description": "可选管理员用户标识列表，最多 50 项。"
+        },
+        "cmdlets": {
+          "type": "array",
+          "maxItems": 50,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "description": "可选 Exchange cmdlet 名称筛选列表，最多 50 项；仅用于日志过滤。"
+        },
+        "result_size": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10000,
+          "description": "最多返回的审计记录数，范围为 1 到 10000。"
+        }
+      },
+      "required": [
+        "start_date",
+        "end_date",
+        "result_size"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Search-AdminAuditLog",
+      "parameters": {
+        "start_date": "StartDate",
+        "end_date": "EndDate",
+        "user_ids": "UserIds",
+        "cmdlets": "Cmdlets",
+        "result_size": "ResultSize"
+      }
+    }
+  },
+  {
+    "name": "remove_mobile_device_partnership",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "移除邮箱与指定移动设备之间的 ActiveSync 合作关系。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mobile device",
+      "activesync",
+      "remove"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/remove-mobiledevice?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512,
+          "description": "移动设备合作关系标识，通常包含邮箱和设备标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Remove-MobileDevice",
+      "parameters": {
+        "identity": "Identity"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "wipe_mobile_device",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "向指定 ActiveSync 移动设备发送远程擦除命令。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "critical",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "mobile device",
+      "remote wipe",
+      "activesync"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/clear-mobiledevice?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512,
+          "description": "要远程擦除的移动设备标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Clear-MobileDevice",
+      "parameters": {
+        "identity": "Identity"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "get_unified_group",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取 Microsoft 365 组的 Exchange 邮件和协作配置。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "microsoft 365 group",
+      "unified group"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-unifiedgroup?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "Microsoft 365 组的别名、SMTP 地址或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-UnifiedGroup",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "set_unified_group_description",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "更新 Microsoft 365 组在 Exchange 中显示的描述。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "microsoft 365 group",
+      "description"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/set-unifiedgroup?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要更新的 Microsoft 365 组标识。"
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 1024,
+          "description": "新的组描述文本。"
+        }
+      },
+      "required": [
+        "identity",
+        "notes"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Set-UnifiedGroup",
+      "parameters": {
+        "identity": "Identity",
+        "notes": "Notes"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "create_unified_group",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "创建 Microsoft 365 组；New-UnifiedGroup 不支持应用独占身份验证，因此当前不可执行。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Delegated execution required; app-only is unsupported"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "unsupported",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "microsoft 365 group",
+      "create",
+      "app-only unsupported"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/new-unifiedgroup?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "display_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "计划创建的 Microsoft 365 组显示名称。"
+        },
+        "alias": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z0-9._-]+$",
+          "description": "计划创建的组别名。"
+        }
+      },
+      "required": [
+        "display_name",
+        "alias"
+      ]
+    },
+    "powershell": null
+  },
+  {
+    "name": "delete_unified_group",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "删除 Microsoft 365 组；Remove-UnifiedGroup 不支持应用独占身份验证，因此当前不可执行。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Delegated execution required; app-only is unsupported"
+    ],
+    "operation_type": "write",
+    "risk_level": "critical",
+    "implementation_status": "unsupported",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "microsoft 365 group",
+      "delete",
+      "app-only unsupported"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/remove-unifiedgroup?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "计划删除的 Microsoft 365 组标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": null
+  },
+  {
+    "name": "add_unified_group_member",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "添加 Microsoft 365 组成员或所有者；Add-UnifiedGroupLinks 不支持应用独占身份验证。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Delegated execution required; app-only is unsupported"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "unsupported",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "microsoft 365 group",
+      "member",
+      "app-only unsupported"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/add-unifiedgrouplinks?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "目标 Microsoft 365 组标识。"
+        },
+        "links": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 100,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 320
+          },
+          "description": "计划添加的用户标识列表，最多 100 项。"
+        },
+        "link_type": {
+          "type": "string",
+          "enum": [
+            "Members",
+            "Owners"
+          ],
+          "description": "计划添加的链接类型：成员或所有者。"
+        }
+      },
+      "required": [
+        "identity",
+        "links",
+        "link_type"
+      ]
+    },
+    "powershell": null
+  },
+  {
+    "name": "remove_unified_group_member",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "移除 Microsoft 365 组成员或所有者；Remove-UnifiedGroupLinks 不支持应用独占身份验证。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Delegated execution required; app-only is unsupported"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "unsupported",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "exchange",
+      "microsoft 365 group",
+      "member",
+      "remove",
+      "app-only unsupported"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/remove-unifiedgrouplinks?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "目标 Microsoft 365 组标识。"
+        },
+        "links": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 100,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 320
+          },
+          "description": "计划移除的用户标识列表，最多 100 项。"
+        },
+        "link_type": {
+          "type": "string",
+          "enum": [
+            "Members",
+            "Owners"
+          ],
+          "description": "计划移除的链接类型：成员或所有者。"
+        }
+      },
+      "required": [
+        "identity",
+        "links",
+        "link_type"
+      ]
+    },
+    "powershell": null
+  },
+  {
+    "name": "get_dlp_compliance_policy",
+    "domain": "Security & Compliance",
+    "backend": "powershell",
+    "description": "读取指定 Microsoft Purview 数据丢失防护策略。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Compliance Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "purview",
+      "dlp",
+      "policy",
+      "compliance"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-dlpcompliancepolicy?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "DLP 策略名称或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "compliance",
+      "cmdlet": "Get-DlpCompliancePolicy",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "get_dlp_compliance_rule",
+    "domain": "Security & Compliance",
+    "backend": "powershell",
+    "description": "读取指定 Microsoft Purview DLP 规则的条件和操作。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Compliance Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "purview",
+      "dlp",
+      "rule",
+      "compliance"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-dlpcompliancerule?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "DLP 规则名称或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "compliance",
+      "cmdlet": "Get-DlpComplianceRule",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "get_retention_compliance_policy",
+    "domain": "Security & Compliance",
+    "backend": "powershell",
+    "description": "读取 Microsoft Purview 保留策略及其工作负载范围。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Compliance Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "purview",
+      "retention",
+      "policy",
+      "compliance"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-retentioncompliancepolicy?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "保留策略名称或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "compliance",
+      "cmdlet": "Get-RetentionCompliancePolicy",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "get_retention_compliance_rule",
+    "domain": "Security & Compliance",
+    "backend": "powershell",
+    "description": "读取 Microsoft Purview 保留规则的保留期限和操作。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Compliance Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "purview",
+      "retention",
+      "rule",
+      "compliance"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-retentioncompliancerule?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "保留规则名称或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "compliance",
+      "cmdlet": "Get-RetentionComplianceRule",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "get_ediscovery_case_searches",
+    "domain": "Security & Compliance",
+    "backend": "powershell",
+    "description": "读取 eDiscovery 内容搜索；内容搜索 cmdlet 不支持应用独占身份验证，因此当前不可执行。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "eDiscovery Manager role",
+      "Delegated execution required; app-only is unsupported"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "unsupported",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "purview",
+      "ediscovery",
+      "content search",
+      "app-only unsupported"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-compliancesearch?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "计划读取的内容搜索名称或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": null
+  },
+  {
+    "name": "start_ediscovery_case_search",
+    "domain": "Security & Compliance",
+    "backend": "powershell",
+    "description": "启动 eDiscovery 内容搜索；Start-ComplianceSearch 不支持应用独占身份验证。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "eDiscovery Manager role",
+      "Delegated execution required; app-only is unsupported"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "unsupported",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "purview",
+      "ediscovery",
+      "content search",
+      "start",
+      "app-only unsupported"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/start-compliancesearch?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "计划启动的内容搜索名称或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": null
+  },
+  {
+    "name": "create_ediscovery_case_search",
+    "domain": "Security & Compliance",
+    "backend": "powershell",
+    "description": "创建 Exchange 邮箱范围的 eDiscovery 内容搜索；New-ComplianceSearch 不支持应用独占身份验证。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "eDiscovery Manager role",
+      "Delegated execution required; app-only is unsupported"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "unsupported",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "purview",
+      "ediscovery",
+      "content search",
+      "create",
+      "app-only unsupported"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/new-compliancesearch?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "计划创建的内容搜索名称。"
+        },
+        "exchange_location": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 100,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 320
+          },
+          "description": "计划纳入搜索的邮箱位置列表，最多 100 项。"
+        },
+        "content_match_query": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096,
+          "description": "计划使用的 KQL 内容匹配查询。"
+        }
+      },
+      "required": [
+        "name",
+        "exchange_location",
+        "content_match_query"
+      ]
+    },
+    "powershell": null
+  },
+  {
+    "name": "get_ediscovery_search_actions",
+    "domain": "Security & Compliance",
+    "backend": "powershell",
+    "description": "读取 eDiscovery 搜索的预览、导出或清除操作状态；相关 cmdlet 不支持应用独占身份验证。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "eDiscovery Manager role",
+      "Delegated execution required; app-only is unsupported"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "unsupported",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "purview",
+      "ediscovery",
+      "search action",
+      "app-only unsupported"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-compliancesearchaction?view=exchange-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "计划读取的搜索操作名称或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": null
+  },
+  {
+    "name": "get_teams_team",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "按组标识读取 Microsoft Teams 团队配置。",
+    "required_permissions": [
+      "Group.Read.All"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "teams",
+      "team",
+      "group",
+      "get"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/get-team?view=teams-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "group_id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "团队关联的 Microsoft 365 组 UUID。"
+        }
+      },
+      "required": [
+        "group_id"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Get-Team",
+      "parameters": {
+        "group_id": "GroupId"
+      }
+    }
+  },
+  {
+    "name": "list_teams_team_members",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "列出团队成员、所有者和来宾，可按角色筛选。",
+    "required_permissions": [
+      "Group.Read.All"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "teams",
+      "team",
+      "members",
+      "owners"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/get-teamuser?view=teams-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "group_id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "团队关联的 Microsoft 365 组 UUID。"
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "Owner",
+            "Member",
+            "Guest"
+          ],
+          "description": "可选团队角色筛选条件。"
+        }
+      },
+      "required": [
+        "group_id"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Get-TeamUser",
+      "parameters": {
+        "group_id": "GroupId",
+        "role": "Role"
+      }
+    }
+  },
+  {
+    "name": "list_teams_team_channels",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "列出团队频道，可按标准、专用或共享频道类型筛选。",
+    "required_permissions": [
+      "Group.Read.All",
+      "ChannelSettings.Read.All"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "teams",
+      "team",
+      "channels",
+      "list"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/get-teamchannel?view=teams-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "group_id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "团队关联的 Microsoft 365 组 UUID。"
+        },
+        "membership_type": {
+          "type": "string",
+          "enum": [
+            "Standard",
+            "Private",
+            "Shared"
+          ],
+          "description": "可选频道成员类型筛选条件。"
+        }
+      },
+      "required": [
+        "group_id"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Get-TeamChannel",
+      "parameters": {
+        "group_id": "GroupId",
+        "membership_type": "MembershipType"
+      }
+    }
+  },
+  {
+    "name": "add_teams_team_member",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "将用户添加为团队成员或所有者。",
+    "required_permissions": [
+      "Group.ReadWrite.All",
+      "User.Read.All (application)"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "teams",
+      "team",
+      "member",
+      "owner",
+      "add"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/add-teamuser?view=teams-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "group_id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "团队关联的 Microsoft 365 组 UUID。"
+        },
+        "user": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要添加的用户 UPN 或对象标识。"
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "Member",
+            "Owner"
+          ],
+          "description": "授予用户的团队角色。"
+        }
+      },
+      "required": [
+        "group_id",
+        "user",
+        "role"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Add-TeamUser",
+      "parameters": {
+        "group_id": "GroupId",
+        "user": "User",
+        "role": "Role"
+      }
+    }
+  },
+  {
+    "name": "remove_teams_team_member",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "从团队移除指定成员或所有者。",
+    "required_permissions": [
+      "Group.ReadWrite.All",
+      "User.Read.All (application)"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "teams",
+      "team",
+      "member",
+      "owner",
+      "remove"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/remove-teamuser?view=teams-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "group_id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "团队关联的 Microsoft 365 组 UUID。"
+        },
+        "user": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "要移除的用户 UPN 或对象标识。"
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "Member",
+            "Owner"
+          ],
+          "description": "要移除的团队角色。"
+        }
+      },
+      "required": [
+        "group_id",
+        "user",
+        "role"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Remove-TeamUser",
+      "parameters": {
+        "group_id": "GroupId",
+        "user": "User",
+        "role": "Role"
+      }
+    }
+  },
+  {
+    "name": "get_teams_online_user",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "读取用户的 Teams 在线配置和已分配策略。",
+    "required_permissions": [
+      "User.Read.All (application)",
+      "Teams Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "teams",
+      "online user",
+      "policy",
+      "get"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/get-csonlineuser?view=teams-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320,
+          "description": "用户 UPN、SIP 地址或对象标识。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Get-CsOnlineUser",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "create_teams_team",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "创建新 Microsoft Teams 团队；应用独占执行路径仍需验证，因此列为计划动作。",
+    "required_permissions": [
+      "Group.Create (application)",
+      "Group.ReadWrite.All",
+      "TeamSettings.ReadWrite.All (application)"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "planned",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "teams",
+      "team",
+      "create",
+      "planned"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/new-team?view=teams-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "display_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "计划创建的团队显示名称。"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1024,
+          "description": "计划创建的团队描述。"
+        },
+        "visibility": {
+          "type": "string",
+          "enum": [
+            "Public",
+            "Private"
+          ],
+          "description": "团队可见性。"
+        }
+      },
+      "required": [
+        "display_name",
+        "description",
+        "visibility"
+      ]
+    },
+    "powershell": null
+  },
+  {
+    "name": "create_teams_channel",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "在团队中创建标准或专用频道；应用独占执行路径仍需验证，因此列为计划动作。",
+    "required_permissions": [
+      "ChannelSettings.ReadWrite.All (application)",
+      "Group.Read.All"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "planned",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "teams",
+      "channel",
+      "create",
+      "planned"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/new-teamchannel?view=teams-ps",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "group_id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "团队关联的 Microsoft 365 组 UUID。"
+        },
+        "display_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
+          "description": "计划创建的频道名称。"
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1024,
+          "description": "计划创建的频道描述。"
+        },
+        "membership_type": {
+          "type": "string",
+          "enum": [
+            "Standard",
+            "Private"
+          ],
+          "description": "计划创建的频道成员类型。"
+        }
+      },
+      "required": [
+        "group_id",
+        "display_name",
+        "description",
+        "membership_type"
+      ]
+    },
+    "powershell": null
+  },
+  {
+    "name": "get_sharepoint_tenant_settings",
+    "domain": "SharePoint Online",
+    "backend": "powershell",
+    "description": "读取 SharePoint Online 租户级共享、存储和站点设置。",
+    "required_permissions": [
+      "Sites.FullControl.All"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "sharepoint",
+      "tenant",
+      "settings",
+      "pnp"
+    ],
+    "docs_url": "https://pnp.github.io/powershell/cmdlets/Get-PnPTenant.html",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {}
+    },
+    "powershell": {
+      "service": "sharepoint",
+      "cmdlet": "Get-PnPTenant"
+    }
+  },
+  {
+    "name": "get_sharepoint_tenant_site",
+    "domain": "SharePoint Online",
+    "backend": "powershell",
+    "description": "读取指定 SharePoint Online 网站集的租户管理属性。",
+    "required_permissions": [
+      "Sites.FullControl.All"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "sharepoint",
+      "tenant site",
+      "site collection",
+      "pnp"
+    ],
+    "docs_url": "https://pnp.github.io/powershell/cmdlets/Get-PnPTenantSite.html",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "format": "uri",
+          "maxLength": 2048,
+          "description": "SharePoint 网站集的完整 HTTPS URL。"
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "sharepoint",
+      "cmdlet": "Get-PnPTenantSite",
+      "parameters": {
+        "identity": "Identity"
+      }
+    }
+  },
+  {
+    "name": "list_sharepoint_deleted_sites",
+    "domain": "SharePoint Online",
+    "backend": "powershell",
+    "description": "列出 SharePoint Online 租户回收站中的已删除网站集。",
+    "required_permissions": [
+      "Sites.FullControl.All"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "sharepoint",
+      "deleted sites",
+      "recycle bin",
+      "pnp"
+    ],
+    "docs_url": "https://pnp.github.io/powershell/cmdlets/Get-PnPTenantDeletedSite.html",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {}
+    },
+    "powershell": {
+      "service": "sharepoint",
+      "cmdlet": "Get-PnPTenantDeletedSite"
+    }
+  },
+  {
+    "name": "set_sharepoint_site_sharing",
+    "domain": "SharePoint Online",
+    "backend": "powershell",
+    "description": "设置 SharePoint 网站集的外部共享能力。",
+    "required_permissions": [
+      "Sites.FullControl.All"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "sharepoint",
+      "site",
+      "external sharing",
+      "pnp"
+    ],
+    "docs_url": "https://pnp.github.io/powershell/cmdlets/Set-PnPTenantSite.html",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "format": "uri",
+          "maxLength": 2048,
+          "description": "要配置的网站集完整 HTTPS URL。"
+        },
+        "sharing_capability": {
+          "type": "string",
+          "enum": [
+            "Disabled",
+            "ExistingExternalUserSharingOnly",
+            "ExternalUserSharingOnly",
+            "ExternalUserAndGuestSharing"
+          ],
+          "description": "网站集外部共享能力。"
+        }
+      },
+      "required": [
+        "identity",
+        "sharing_capability"
+      ]
+    },
+    "powershell": {
+      "service": "sharepoint",
+      "cmdlet": "Set-PnPTenantSite",
+      "parameters": {
+        "identity": "Identity",
+        "sharing_capability": "SharingCapability"
+      }
+    }
+  },
+  {
+    "name": "set_sharepoint_site_storage_quota",
+    "domain": "SharePoint Online",
+    "backend": "powershell",
+    "description": "设置 SharePoint 网站集存储上限和警告阈值，单位为 MB。",
+    "required_permissions": [
+      "Sites.FullControl.All"
+    ],
+    "operation_type": "write",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "sharepoint",
+      "site",
+      "storage quota",
+      "pnp"
+    ],
+    "docs_url": "https://pnp.github.io/powershell/cmdlets/Set-PnPTenantSite.html",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "format": "uri",
+          "maxLength": 2048,
+          "description": "要配置的网站集完整 HTTPS URL。"
+        },
+        "storage_maximum_mb": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 26214400,
+          "description": "存储上限，单位为 MB，范围为 1 到 26214400。"
+        },
+        "storage_warning_mb": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 26214400,
+          "description": "存储警告阈值，单位为 MB，范围为 1 到 26214400。"
+        }
+      },
+      "required": [
+        "identity",
+        "storage_maximum_mb",
+        "storage_warning_mb"
+      ]
+    },
+    "powershell": {
+      "service": "sharepoint",
+      "cmdlet": "Set-PnPTenantSite",
+      "parameters": {
+        "identity": "Identity",
+        "storage_maximum_mb": "StorageQuota",
+        "storage_warning_mb": "StorageQuotaWarningLevel"
+      }
+    }
+  },
+  {
+    "name": "lock_sharepoint_site",
+    "domain": "SharePoint Online",
+    "backend": "powershell",
+    "description": "将 SharePoint 网站集设为只读、禁止访问或解除锁定。",
+    "required_permissions": [
+      "Sites.FullControl.All"
+    ],
+    "operation_type": "write",
+    "risk_level": "critical",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "sharepoint",
+      "site",
+      "lock",
+      "no access",
+      "pnp"
+    ],
+    "docs_url": "https://pnp.github.io/powershell/cmdlets/Set-PnPTenantSite.html",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "format": "uri",
+          "maxLength": 2048,
+          "description": "要锁定或解锁的网站集完整 HTTPS URL。"
+        },
+        "lock_state": {
+          "type": "string",
+          "enum": [
+            "Unlock",
+            "ReadOnly",
+            "NoAccess"
+          ],
+          "description": "网站集锁定状态。"
+        }
+      },
+      "required": [
+        "identity",
+        "lock_state"
+      ]
+    },
+    "powershell": {
+      "service": "sharepoint",
+      "cmdlet": "Set-PnPTenantSite",
+      "parameters": {
+        "identity": "Identity",
+        "lock_state": "LockState"
+      }
+    }
+  },
+  {
+    "name": "create_sharepoint_site",
+    "domain": "SharePoint Online",
+    "backend": "powershell",
+    "description": "创建 SharePoint Online 网站集；应用独占参数组合仍需验证，因此列为计划动作。",
+    "required_permissions": [
+      "Sites.FullControl.All"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "planned",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "sharepoint",
+      "site collection",
+      "create",
+      "planned"
+    ],
+    "docs_url": "https://pnp.github.io/powershell/cmdlets/Add-PnPTenantSite.html",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256,
+          "description": "计划创建的网站集标题。"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "maxLength": 2048,
+          "description": "计划创建的网站集完整 HTTPS URL。"
+        },
+        "owner": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 320,
+          "description": "网站集主要所有者的 UPN。"
+        },
+        "template": {
+          "type": "string",
+          "enum": [
+            "STS#3",
+            "SITEPAGEPUBLISHING#0"
+          ],
+          "description": "网站模板：新式工作组网站或通信网站。"
+        }
+      },
+      "required": [
+        "title",
+        "url",
+        "owner",
+        "template"
+      ]
+    },
+    "powershell": null
+  },
+  {
+    "name": "delete_sharepoint_site",
+    "domain": "SharePoint Online",
+    "backend": "powershell",
+    "description": "删除 SharePoint Online 网站集；应用独占删除路径仍需验证，因此列为计划动作。",
+    "required_permissions": [
+      "Sites.FullControl.All"
+    ],
+    "operation_type": "write",
+    "risk_level": "critical",
+    "implementation_status": "planned",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "sharepoint",
+      "site collection",
+      "delete",
+      "planned"
+    ],
+    "docs_url": "https://pnp.github.io/powershell/cmdlets/Remove-PnPTenantSite.html",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "maxLength": 2048,
+          "description": "计划删除的网站集完整 HTTPS URL。"
+        }
+      },
+      "required": [
+        "url"
+      ]
+    },
+    "powershell": null
+  },
+  {
+    "name": "list_teams_meeting_policies",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "列出 Microsoft Teams 会议策略及其会议加入、录制和大厅配置。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "list",
+      "meeting",
+      "policies"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/get-csteamsmeetingpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Get-CsTeamsMeetingPolicy",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "get_teams_meeting_policy",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "读取指定 Teams 会议策略的完整配置。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "get",
+      "meeting",
+      "policy"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/get-csteamsmeetingpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "会议策略 Identity 或 Global。",
+          "minLength": 1,
+          "maxLength": 256
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Get-CsTeamsMeetingPolicy",
+      "parameters": {
+        "identity": "Identity"
+      },
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "set_teams_meeting_anonymous_join",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "控制指定 Teams 会议策略是否允许匿名用户加入会议。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "set",
+      "meeting",
+      "anonymous",
+      "join"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/set-csteamsmeetingpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "会议策略 Identity 或 Global。",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "allow_anonymous": {
+          "type": "boolean",
+          "description": "true 允许匿名加入，false 禁止匿名加入。"
+        }
+      },
+      "required": [
+        "identity",
+        "allow_anonymous"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Set-CsTeamsMeetingPolicy",
+      "parameters": {
+        "identity": "Identity",
+        "allow_anonymous": "AllowAnonymousUsersToJoinMeeting"
+      },
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "set_teams_meeting_recording",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "控制指定 Teams 会议策略是否允许云端录制。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "set",
+      "meeting",
+      "recording"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/set-csteamsmeetingpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "会议策略 Identity 或 Global。",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "allow_recording": {
+          "type": "boolean",
+          "description": "true 允许云录制，false 禁止云录制。"
+        }
+      },
+      "required": [
+        "identity",
+        "allow_recording"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Set-CsTeamsMeetingPolicy",
+      "parameters": {
+        "identity": "Identity",
+        "allow_recording": "AllowCloudRecording"
+      },
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "set_teams_meeting_lobby",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "设置指定 Teams 会议策略默认允许直接进入会议的人群。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "set",
+      "meeting",
+      "lobby"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/set-csteamsmeetingpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "会议策略 Identity 或 Global。",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "auto_admitted_users": {
+          "type": "string",
+          "description": "允许绕过会议大厅的人群范围。",
+          "enum": [
+            "Everyone",
+            "EveryoneInCompany",
+            "EveryoneInCompanyExcludingGuests",
+            "InvitedUsers"
+          ]
+        }
+      },
+      "required": [
+        "identity",
+        "auto_admitted_users"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Set-CsTeamsMeetingPolicy",
+      "parameters": {
+        "identity": "Identity",
+        "auto_admitted_users": "AutoAdmittedUsers"
+      },
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "grant_teams_meeting_policy",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "将 Teams 会议策略分配给指定用户。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "grant",
+      "meeting",
+      "policy"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/grant-csteamsmeetingpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "目标用户 UPN 或 Object ID。",
+          "minLength": 1,
+          "maxLength": 320
+        },
+        "policy_name": {
+          "type": "string",
+          "description": "要分配的会议策略名称。",
+          "minLength": 1,
+          "maxLength": 256
+        }
+      },
+      "required": [
+        "identity",
+        "policy_name"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Grant-CsTeamsMeetingPolicy",
+      "parameters": {
+        "identity": "Identity",
+        "policy_name": "PolicyName"
+      },
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "list_teams_messaging_policies",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "列出 Microsoft Teams 消息策略。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "list",
+      "messaging",
+      "policies"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/get-csteamsmessagingpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Get-CsTeamsMessagingPolicy",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "get_teams_messaging_policy",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "读取指定 Teams 消息策略配置。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "get",
+      "messaging",
+      "policy"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/get-csteamsmessagingpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "消息策略 Identity 或 Global。",
+          "minLength": 1,
+          "maxLength": 256
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Get-CsTeamsMessagingPolicy",
+      "parameters": {
+        "identity": "Identity"
+      },
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "grant_teams_messaging_policy",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "将 Teams 消息策略分配给指定用户。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "grant",
+      "messaging",
+      "policy"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/grant-csteamsmessagingpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "目标用户 UPN 或 Object ID。",
+          "minLength": 1,
+          "maxLength": 320
+        },
+        "policy_name": {
+          "type": "string",
+          "description": "要分配的消息策略名称。",
+          "minLength": 1,
+          "maxLength": 256
+        }
+      },
+      "required": [
+        "identity",
+        "policy_name"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Grant-CsTeamsMessagingPolicy",
+      "parameters": {
+        "identity": "Identity",
+        "policy_name": "PolicyName"
+      },
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "list_teams_calling_policies",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "列出 Microsoft Teams 通话策略。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "list",
+      "calling",
+      "policies"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/get-csteamscallingpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Get-CsTeamsCallingPolicy",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "get_teams_calling_policy",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "读取指定 Teams 通话策略配置。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "get",
+      "calling",
+      "policy"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/get-csteamscallingpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "通话策略 Identity 或 Global。",
+          "minLength": 1,
+          "maxLength": 256
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Get-CsTeamsCallingPolicy",
+      "parameters": {
+        "identity": "Identity"
+      },
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "grant_teams_calling_policy",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "将 Teams 通话策略分配给指定用户。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "grant",
+      "calling",
+      "policy"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/grant-csteamscallingpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "目标用户 UPN 或 Object ID。",
+          "minLength": 1,
+          "maxLength": 320
+        },
+        "policy_name": {
+          "type": "string",
+          "description": "要分配的通话策略名称。",
+          "minLength": 1,
+          "maxLength": 256
+        }
+      },
+      "required": [
+        "identity",
+        "policy_name"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Grant-CsTeamsCallingPolicy",
+      "parameters": {
+        "identity": "Identity",
+        "policy_name": "PolicyName"
+      },
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "list_teams_app_permission_policies",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "列出 Teams 应用权限策略。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "list",
+      "app",
+      "permission",
+      "policies"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/get-csteamsapppermissionpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Get-CsTeamsAppPermissionPolicy",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "grant_teams_app_permission_policy",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "将 Teams 应用权限策略分配给指定用户。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "grant",
+      "app",
+      "permission",
+      "policy"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/grant-csteamsapppermissionpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "目标用户 UPN 或 Object ID。",
+          "minLength": 1,
+          "maxLength": 320
+        },
+        "policy_name": {
+          "type": "string",
+          "description": "要分配的应用权限策略名称。",
+          "minLength": 1,
+          "maxLength": 256
+        }
+      },
+      "required": [
+        "identity",
+        "policy_name"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Grant-CsTeamsAppPermissionPolicy",
+      "parameters": {
+        "identity": "Identity",
+        "policy_name": "PolicyName"
+      },
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "list_teams_app_setup_policies",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "列出 Teams 应用设置策略。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "list",
+      "app",
+      "setup",
+      "policies"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/get-csteamsappsetuppolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Get-CsTeamsAppSetupPolicy",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "grant_teams_app_setup_policy",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "将 Teams 应用设置策略分配给指定用户。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "grant",
+      "app",
+      "setup",
+      "policy"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/grant-csteamsappsetuppolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "目标用户 UPN 或 Object ID。",
+          "minLength": 1,
+          "maxLength": 320
+        },
+        "policy_name": {
+          "type": "string",
+          "description": "要分配的应用设置策略名称。",
+          "minLength": 1,
+          "maxLength": 256
+        }
+      },
+      "required": [
+        "identity",
+        "policy_name"
+      ]
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Grant-CsTeamsAppSetupPolicy",
+      "parameters": {
+        "identity": "Identity",
+        "policy_name": "PolicyName"
+      },
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "get_teams_tenant",
+    "domain": "Microsoft Teams",
+    "backend": "powershell",
+    "description": "读取 Teams 租户级配置和租户标识信息。",
+    "required_permissions": [
+      "Teams Administrator role",
+      "User.Read.All",
+      "Group.ReadWrite.All",
+      "AppCatalog.ReadWrite.All",
+      "TeamSettings.ReadWrite.All",
+      "Channel.Delete.All",
+      "ChannelSettings.ReadWrite.All",
+      "ChannelMember.ReadWrite.All"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "get",
+      "tenant"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/teams/get-cstenant",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "teams",
+      "cmdlet": "Get-CsTenant",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "get_message_trace_detail",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取单封邮件跟踪记录的详细投递事件。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "get",
+      "message",
+      "trace",
+      "detail"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-messagetracedetail",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "message_trace_id": {
+          "type": "string",
+          "description": "邮件跟踪记录 ID。",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "recipient_address": {
+          "type": "string",
+          "description": "邮件收件人 SMTP 地址。",
+          "minLength": 3,
+          "maxLength": 320
+        }
+      },
+      "required": [
+        "message_trace_id",
+        "recipient_address"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-MessageTraceDetail",
+      "parameters": {
+        "message_trace_id": "MessageTraceId",
+        "recipient_address": "RecipientAddress"
+      },
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "remove_transport_rule",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "删除指定 Exchange 邮件流规则。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "critical",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "remove",
+      "transport",
+      "rule"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/remove-transportrule",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "邮件流规则名称或 Identity。",
+          "minLength": 1,
+          "maxLength": 256
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Remove-TransportRule",
+      "parameters": {
+        "identity": "Identity"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "create_transport_rule_block_sender",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "创建一条强制生效的邮件流规则，拒绝来自指定地址关键词的邮件。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "create",
+      "transport",
+      "rule",
+      "block",
+      "sender"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/new-transportrule",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "新邮件流规则名称。",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "sender_words": {
+          "type": "array",
+          "description": "触发规则的发件人地址关键词列表。",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "maxItems": 20
+        },
+        "reject_reason": {
+          "type": "string",
+          "description": "拒绝邮件时返回给发件人的原因。",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      },
+      "required": [
+        "name",
+        "sender_words",
+        "reject_reason"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "New-TransportRule",
+      "parameters": {
+        "name": "Name",
+        "sender_words": "FromAddressContainsWords",
+        "reject_reason": "RejectMessageReasonText"
+      },
+      "constant_parameters": {
+        "Mode": "Enforce",
+        "StopRuleProcessing": true
+      }
+    }
+  },
+  {
+    "name": "list_inbound_connectors",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "列出 Exchange Online 入站连接器。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "list",
+      "inbound",
+      "connectors"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-inboundconnector",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-InboundConnector",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "set_inbound_connector_enabled",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "启用或停用 Exchange Online 入站连接器。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "set",
+      "inbound",
+      "connector",
+      "enabled"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/set-inboundconnector",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "入站连接器名称或 Identity。",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "enabled": {
+          "type": "boolean",
+          "description": "true 启用，false 停用。"
+        }
+      },
+      "required": [
+        "identity",
+        "enabled"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Set-InboundConnector",
+      "parameters": {
+        "identity": "Identity",
+        "enabled": "Enabled"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "get_organization_config",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取 Exchange Online 组织级配置。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "get",
+      "organization",
+      "config"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-organizationconfig",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-OrganizationConfig",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "get_transport_config",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取 Exchange Online 传输配置。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "get",
+      "transport",
+      "config"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-transportconfig",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-TransportConfig",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "list_mobile_devices",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "列出 Exchange ActiveSync 移动设备合作关系。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "list",
+      "mobile",
+      "devices"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-mobiledevice",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-MobileDevice",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "get_antiphishing_policy",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取 Exchange Online Anti-Phishing 策略。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Security Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "get",
+      "antiphishing",
+      "policy"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-antiphishpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-AntiPhishPolicy",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "get_hosted_content_filter_policy",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取 Exchange Online 反垃圾邮件内容筛选策略。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Security Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "get",
+      "hosted",
+      "content",
+      "filter",
+      "policy"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-hostedcontentfilterpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-HostedContentFilterPolicy",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "get_malware_filter_policy",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取 Exchange Online 反恶意软件策略。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Security Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "get",
+      "malware",
+      "filter",
+      "policy"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-malwarefilterpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-MalwareFilterPolicy",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "get_mailbox_folder_permissions",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "读取指定邮箱文件夹的显式访问权限。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "get",
+      "mailbox",
+      "folder",
+      "permissions"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-mailboxfolderpermission",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "邮箱文件夹 Identity，例如 user@contoso.com:\\Calendar。",
+          "minLength": 1,
+          "maxLength": 512
+        }
+      },
+      "required": [
+        "identity"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Get-MailboxFolderPermission",
+      "parameters": {
+        "identity": "Identity"
+      },
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "add_mailbox_folder_permission",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "向指定安全主体授予邮箱文件夹访问权限。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "add",
+      "mailbox",
+      "folder",
+      "permission"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/add-mailboxfolderpermission",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "邮箱文件夹 Identity。",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "user": {
+          "type": "string",
+          "description": "被授权的用户或安全组。",
+          "minLength": 1,
+          "maxLength": 320
+        },
+        "access_rights": {
+          "type": "string",
+          "description": "文件夹访问权限。",
+          "enum": [
+            "Reviewer",
+            "Contributor",
+            "NonEditingAuthor",
+            "Author",
+            "Editor",
+            "PublishingEditor",
+            "Owner"
+          ]
+        }
+      },
+      "required": [
+        "identity",
+        "user",
+        "access_rights"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Add-MailboxFolderPermission",
+      "parameters": {
+        "identity": "Identity",
+        "user": "User",
+        "access_rights": "AccessRights"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "remove_mailbox_folder_permission",
+    "domain": "Exchange Online",
+    "backend": "powershell",
+    "description": "移除安全主体对邮箱文件夹的访问权限。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Exchange Administrator role"
+    ],
+    "operation_type": "write",
+    "risk_level": "high",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "remove",
+      "mailbox",
+      "folder",
+      "permission"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/remove-mailboxfolderpermission",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "description": "邮箱文件夹 Identity。",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "user": {
+          "type": "string",
+          "description": "被撤销权限的用户或安全组。",
+          "minLength": 1,
+          "maxLength": 320
+        }
+      },
+      "required": [
+        "identity",
+        "user"
+      ]
+    },
+    "powershell": {
+      "service": "exchange",
+      "cmdlet": "Remove-MailboxFolderPermission",
+      "parameters": {
+        "identity": "Identity",
+        "user": "User"
+      },
+      "constant_parameters": {
+        "Confirm": false
+      }
+    }
+  },
+  {
+    "name": "search_unified_audit_log",
+    "domain": "Security & Compliance",
+    "backend": "powershell",
+    "description": "按时间、记录类型和用户搜索 Microsoft 365 统一审计日志。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Security Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "search",
+      "unified",
+      "audit",
+      "log"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/search-unifiedauditlog",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start_date": {
+          "type": "string",
+          "description": "审计查询开始时间，ISO 8601 格式。",
+          "format": "date-time"
+        },
+        "end_date": {
+          "type": "string",
+          "description": "审计查询结束时间，ISO 8601 格式。",
+          "format": "date-time"
+        },
+        "record_type": {
+          "type": "string",
+          "description": "可选审计记录类型，例如 ExchangeAdmin 或 AzureActiveDirectory。",
+          "maxLength": 128
+        },
+        "operations": {
+          "type": "string",
+          "description": "可选操作名称过滤。",
+          "maxLength": 256
+        },
+        "user_ids": {
+          "type": "array",
+          "description": "可选用户 UPN 列表。",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20
+        },
+        "result_size": {
+          "type": "integer",
+          "description": "返回记录上限。",
+          "minimum": 1,
+          "maximum": 5000
+        }
+      },
+      "required": [
+        "start_date",
+        "end_date",
+        "result_size"
+      ]
+    },
+    "powershell": {
+      "service": "compliance",
+      "cmdlet": "Search-UnifiedAuditLog",
+      "parameters": {
+        "start_date": "StartDate",
+        "end_date": "EndDate",
+        "record_type": "RecordType",
+        "operations": "Operations",
+        "user_ids": "UserIds",
+        "result_size": "ResultSize"
+      },
+      "constant_parameters": {
+        "SessionCommand": "ReturnLargeSet"
+      }
+    }
+  },
+  {
+    "name": "get_protection_alert",
+    "domain": "Security & Compliance",
+    "backend": "powershell",
+    "description": "读取 Microsoft Purview 保护告警策略配置。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Security Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "get",
+      "protection",
+      "alert"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-protectionalert",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "compliance",
+      "cmdlet": "Get-ProtectionAlert",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "get_safe_links_policy",
+    "domain": "Security & Compliance",
+    "backend": "powershell",
+    "description": "读取 Microsoft Defender for Office 365 安全链接策略。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Security Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "get",
+      "safe",
+      "links",
+      "policy"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-safelinkspolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "compliance",
+      "cmdlet": "Get-SafeLinksPolicy",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "get_safe_attachment_policy",
+    "domain": "Security & Compliance",
+    "backend": "powershell",
+    "description": "读取 Microsoft Defender for Office 365 安全附件策略。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Security Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "get",
+      "safe",
+      "attachment",
+      "policy"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-safeattachmentpolicy",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "compliance",
+      "cmdlet": "Get-SafeAttachmentPolicy",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "get_compliance_tag",
+    "domain": "Security & Compliance",
+    "backend": "powershell",
+    "description": "读取 Microsoft Purview 保留标签配置。",
+    "required_permissions": [
+      "Exchange.ManageAsApp",
+      "Security Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "get",
+      "compliance",
+      "tag"
+    ],
+    "docs_url": "https://learn.microsoft.com/en-us/powershell/module/exchange/get-compliancetag",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "compliance",
+      "cmdlet": "Get-ComplianceTag",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "list_sharepoint_tenant_sites",
+    "domain": "SharePoint Online",
+    "backend": "powershell",
+    "description": "列出 SharePoint Online 租户网站集，可选择返回详细属性。",
+    "required_permissions": [
+      "Sites.FullControl.All",
+      "SharePoint Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "medium",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "list",
+      "tenant",
+      "sites"
+    ],
+    "docs_url": "https://pnp.github.io/powershell/cmdlets/Get-PnPTenantSite.html",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "detailed": {
+          "type": "boolean",
+          "description": "true 返回所有站点详细属性，false 返回基本属性。"
+        }
+      },
+      "required": []
+    },
+    "powershell": {
+      "service": "sharepoint",
+      "cmdlet": "Get-PnPTenantSite",
+      "parameters": {
+        "detailed": "Detailed"
+      },
+      "constant_parameters": {}
+    }
+  },
+  {
+    "name": "get_sharepoint_tenant_app_catalog_url",
+    "domain": "SharePoint Online",
+    "backend": "powershell",
+    "description": "读取 SharePoint Online 租户应用目录 URL。",
+    "required_permissions": [
+      "Sites.FullControl.All",
+      "SharePoint Administrator role"
+    ],
+    "operation_type": "read",
+    "risk_level": "low",
+    "implementation_status": "implemented",
+    "review_status": "pending",
+    "enabled": false,
+    "keywords": [
+      "get",
+      "tenant",
+      "app",
+      "catalog",
+      "url"
+    ],
+    "docs_url": "https://pnp.github.io/powershell/cmdlets/Get-PnPTenantAppCatalogUrl.html",
+    "input_schema": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {},
+      "required": []
+    },
+    "powershell": {
+      "service": "sharepoint",
+      "cmdlet": "Get-PnPTenantAppCatalogUrl",
+      "parameters": {},
+      "constant_parameters": {}
+    }
+  }
+]

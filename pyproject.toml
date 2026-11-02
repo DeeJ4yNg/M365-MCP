@@ -1,0 +1,64 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "m365-mcp-servers"
+version = "0.2.0"
+description = "Governed Microsoft 365 Graph and PowerShell MCP servers"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Proprietary" }
+dependencies = [
+  "cryptography>=44,<47",
+  "fastmcp==3.4.11",
+  "httpx>=0.28.1,<1",
+  "jsonschema>=4.23,<5",
+  "msal>=1.32,<2",
+  "numpy>=2.1,<3",
+  "pydantic-settings>=2.10,<3",
+  "python-dotenv>=1,<2",
+  "PyJWT[crypto]>=2.10,<3",
+  "redis>=6,<8",
+  "uvicorn>=0.35,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3,<9",
+  "pytest-asyncio>=0.24,<1",
+  "pytest-cov>=6,<8",
+  "respx>=0.22,<1",
+  "ruff>=0.11,<1",
+]
+
+[project.scripts]
+m365-graph-server = "m365_mcp.graph.server:main"
+m365-powershell-server = "m365_mcp.powershell.server:main"
+m365-inventory = "m365_mcp.inventory_cli:main"
+m365-confirmation = "m365_mcp.confirmation_cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/m365_mcp"]
+
+[tool.pytest.ini_options]
+addopts = "-q --strict-markers"
+asyncio_mode = "auto"
+testpaths = ["tests"]
+markers = [
+  "integration: tests that launch local server processes",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF", "ASYNC", "S"]
+ignore = ["S101"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E501", "S105", "S106", "S311"]
+"scripts/generate_graph_catalog.py" = ["E501"]
+"agent_smoke/*" = ["S105"]
