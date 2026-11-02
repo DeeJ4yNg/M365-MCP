@@ -4,15 +4,17 @@
 
 当前统一 Inventory 共 298 个业务动作。
 
-| Server | 动作数 | 已实现 | 计划 | 不支持 | 启用 |
-|---|---:|---:|---:|---:|---:|
-| graph | 181 | 181 | 0 | 0 | 0 |
-| powershell | 117 | 105 | 4 | 8 | 0 |
-| 合计 | 298 | 286 | 4 | 8 | 0 |
+| Server | 动作数 | 已实现 | 计划 | 不支持 | Approved | 启用 |
+|---|---:|---:|---:|---:|---:|---:|
+| graph | 181 | 181 | 0 | 0 | 100 | 100 |
+| powershell | 117 | 105 | 4 | 8 | 59 | 59 |
+| 合计 | 298 | 286 | 4 | 8 | 159 | 159 |
 
-除五个治理工具外，仓库交付状态没有任何业务动作 enabled。
-所有动作的 `review_status` 都是 `pending`。
-交付物不预置“看起来安全所以自动批准”的动作。
+当前基线只启用 159 个 implemented read action。
+127 个 write action 和 12 个未实现 action 仍为 disabled。
+这批 read action 使用 owner 批量批准，evidence 为 `OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)`。
+进入生产前应替换为逐 domain 的正式 Review 证据，并补做最小权限和 tenant 验收。
+不要因为 read 已启用就默认所有上游 Graph/Exchange 权限已经具备。
 
 领域分布：
 
@@ -147,7 +149,8 @@ uv run m365-inventory review \
   --evidence CHG-2026-0001
 ```
 
-此时动作仍不可执行，因为 enabledTools 为空。
+如果只执行 review 而没有把 action 加入 enabledTools，它仍不可执行。
+当前 read 基线已经批量加入 enabledTools，write action 仍保持未启用。
 
 ### 5.3 启用
 

@@ -1,7 +1,963 @@
 {
   "schemaVersion": 1,
   "reviews": {
-    "graph": {},
-    "powershell": {}
+    "graph": {
+      "entra_get_application": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_get_conditional_access_policy": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_get_device": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_get_group": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_get_organization": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_get_service_principal": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_get_sign_in_log": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_get_user": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_list_applications": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_list_auth_methods": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_list_conditional_access_policies": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_list_devices": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_list_directory_audits": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_list_directory_roles": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_list_domains": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_list_group_members": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_list_group_owners": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_list_groups": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_list_role_assignments": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_list_role_definitions": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_list_service_principals": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_list_sign_in_logs": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_list_users": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "entra_mfa_registration_report": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_get_app": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_get_autopilot_device": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_get_autopilot_profile": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_get_compliance_policy": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_get_device_configuration": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_get_enrollment_configuration": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_get_managed_device": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_get_managed_device_overview": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_get_quality_update_policy": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_get_settings_catalog_policy": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_list_app_device_statuses": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_list_apps": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_list_autopilot_devices": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_list_autopilot_profiles": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_list_compliance_assignments": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_list_compliance_policies": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_list_configuration_assignments": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_list_detected_apps": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_list_device_categories": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_list_device_configurations": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_list_enrollment_configurations": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_list_feature_update_profiles": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_list_managed_devices": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_list_quality_update_policies": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "intune_list_settings_catalog_policies": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_email_activity_user_detail": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_get_message_center_post": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_get_service_health": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_get_service_issue": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_get_user_license_details": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_list_message_center": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_list_service_health": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_list_service_issues": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_list_subscribed_skus": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_mailbox_usage_counts": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_mailbox_usage_detail": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_office_active_user_counts": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_office_active_user_detail": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_onedrive_activity_user_detail": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_onedrive_usage_account_detail": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_sharepoint_site_usage_detail": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_sharepoint_site_usage_storage": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_teams_device_usage_distribution": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "m365_teams_user_activity_detail": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "onedrive_get_item": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "onedrive_get_quota": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "onedrive_get_user_drive": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "onedrive_list_item_permissions": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "onedrive_list_root_children": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "security_get_alert_v2": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "security_get_incident": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "security_get_risky_user": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "security_list_alerts_v2": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "security_list_incidents": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "security_list_risk_detections": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "security_list_risky_users": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "security_list_secure_score_controls": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "security_list_secure_scores": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "sharepoint_get_drive_item": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "sharepoint_get_list": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "sharepoint_get_list_item": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "sharepoint_get_site": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "sharepoint_get_site_drive": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "sharepoint_list_drive_items": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "sharepoint_list_item_permissions": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "sharepoint_list_items": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "sharepoint_list_lists": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "sharepoint_list_sites": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "teams_get_channel": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "teams_get_online_meeting": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "teams_get_team": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "teams_list_channels": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "teams_list_installed_apps": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "teams_list_members": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "teams_list_online_meetings": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "teams_list_teams": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      }
+    },
+    "powershell": {
+      "get_antiphishing_policy": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_calendar_processing": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_compliance_tag": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_distribution_group": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_distribution_group_members": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_dlp_compliance_policy": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_dlp_compliance_rule": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_exchange_mailbox": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_exchange_mailbox_folder_statistics": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_exchange_mailbox_statistics": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_exchange_recipient": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_hosted_content_filter_policy": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_mail_contact": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_mail_user": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_mailbox_auto_reply_configuration": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_mailbox_folder_permissions": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_mailbox_permissions": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_malware_filter_policy": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_message_trace_detail": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_organization_config": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_outbound_connector": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_protection_alert": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_remote_domain": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_retention_compliance_policy": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_retention_compliance_rule": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_safe_attachment_policy": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_safe_links_policy": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_send_as_permissions": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_sharepoint_tenant_app_catalog_url": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_sharepoint_tenant_settings": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_sharepoint_tenant_site": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_teams_calling_policy": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_teams_meeting_policy": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_teams_messaging_policy": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_teams_online_user": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_teams_team": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_teams_tenant": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_transport_config": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "get_unified_group": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "list_accepted_domains": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "list_distribution_groups": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "list_exchange_mailboxes": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "list_inbound_connectors": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "list_mobile_devices": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "list_quarantine_messages": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "list_sharepoint_deleted_sites": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "list_sharepoint_tenant_sites": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "list_teams_app_permission_policies": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "list_teams_app_setup_policies": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "list_teams_calling_policies": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "list_teams_meeting_policies": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "list_teams_messaging_policies": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "list_teams_team_channels": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "list_teams_team_members": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "list_transport_rules": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "preview_quarantine_message": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "search_exchange_admin_audit_log": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "search_unified_audit_log": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      },
+      "trace_exchange_messages": {
+        "status": "approved",
+        "reviewed_by": "DeeJ4yNg",
+        "reviewed_at": "2026-11-02T14:00:17.350600Z",
+        "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+      }
+    }
   }
 }

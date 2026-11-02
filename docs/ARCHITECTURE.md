@@ -302,7 +302,8 @@ Catalog 和 Review 文件使用 mtime 热加载，修改后下一次调用生效
 2. Graph 分页 nextLink 必须与配置的 Graph origin 和 `/v1.0` base path 同源。
 3. PowerShell 参数通过 JSON stdin 传递，不经过 shell 字符串拼接。
 4. PowerShell worker 在执行前再次核对 action 和 cmdlet 绑定。
-5. 所有业务动作在 Catalog 中默认 `review_status=pending` 且 `enabled=false`。
+5. 新导入的业务动作默认 `review_status=pending` 且 `enabled=false`。
+   当前交付基线单独 enable 了 159 个 implemented read action，所有 write action 仍为 disabled。
 6. 未 approved、未 implemented 或不在 enabledTools 的动作无法执行。
 7. 写操作必须同时具备入口写角色、enabled 动作、有效 confirmation 和未使用的 jti。
 8. 审批 token 不接受 alg=none、错误 audience、错误 actor 或过期时间。

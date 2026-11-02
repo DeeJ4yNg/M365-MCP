@@ -8,8 +8,9 @@
 | `powershell-mcp` | Exchange Online、Security & Compliance、Teams policies、SharePoint tenant admin | Python 3.13、PowerShell 7.6.9、EXO 3.10.1、Teams 8.0.0、PnP 3.4.1 |
 
 当前 Inventory 共 298 个业务动作。
-每个动作默认 `review_status=pending` 且 `enabled=false`。
-仓库不预置任何已启用的业务动作。
+仓库基线已 Review approved 并 enable 159 个 implemented read action，占 Graph 100 个、PowerShell 59 个。
+127 个 write action 和 12 个未实现 action 仍保持 disabled。
+这批只读 enablement 使用 owner 批量批准，接入生产前应替换为正式的逐域 Review 证据。
 
 ## 核心设计
 

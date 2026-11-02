@@ -609,7 +609,8 @@ config/
 4. confirmation 当前只支持一个验证公钥，没有 `kid` 多 key rotation。
 5. 一个部署只对应一个入口 tenant 和一个 upstream tenant。
 6. 全部上游操作使用 app-only 身份，不提供 per-user delegated audit。
-7. 业务动作全部默认关闭，默认 Inventory 的 enabled 数为 0。
+7. 当前只启用 159 个 read action，127 个 write action 仍关闭。
+   这批 read action 使用 owner 批量批准，不是逐 action 的正式生产 Review。
 
 这些问题应在发布评审中作为 residual risk 记录。
 它们不能被“本地测试通过”掩盖。

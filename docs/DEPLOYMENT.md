@@ -121,10 +121,12 @@ chmod 600 secrets/*
 
 ## 4. 初始 enabledTools
 
-仓库默认 `config/enabledTools.json` 中两个 Server 都是空数组。
-这表示除五个治理工具外，没有任何业务动作可用。
-不要把初始状态改成“全部启用”。
-先用只读动作完成 tenant 验收。
+仓库当前基线在 `config/enabledTools.json` 中启用了 159 个 implemented read action：
+Graph 100 个，PowerShell 59 个。
+127 个 write action 和 12 个未实现 action 仍为 disabled。
+这批只读启用使用 owner 批量批准，evidence 为 `OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)`。
+进入生产前应替换为逐 domain 的正式 Review 证据，并先完成 tenant 权限验收。
+不要把初始状态扩展成“全部启用”。
 
 ## 5. 构建镜像
 
@@ -266,9 +268,10 @@ MCP_SEARCH_MODE=lexical
 不需要回滚 Catalog、Review 或已执行的 action。
 Hybrid 只影响动作发现，不影响 execute_read、execute_write、confirmation 或 upstream 权限。
 
-## 7. Review 与启用第一个只读动作
+## 7. Review 与启用新增 action
 
-先选择一个低风险只读动作：
+当前基线已经启用 159 个只读 action。
+下面流程适用于新增 action 或替换批量批准证据：
 
 ```bash
 uv run m365-inventory review \

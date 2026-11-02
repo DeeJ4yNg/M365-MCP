@@ -20,30 +20,30 @@ Total actions: 298
 | graph | `entra_delete_group` | Entra ID | write | critical | implemented | pending | no |
 | graph | `entra_delete_service_principal` | Entra ID | write | critical | implemented | pending | no |
 | graph | `entra_delete_user` | Entra ID | write | critical | implemented | pending | no |
-| graph | `entra_get_application` | Entra ID | read | medium | implemented | pending | no |
-| graph | `entra_get_conditional_access_policy` | Entra ID | read | medium | implemented | pending | no |
-| graph | `entra_get_device` | Entra ID | read | low | implemented | pending | no |
-| graph | `entra_get_group` | Entra ID | read | low | implemented | pending | no |
-| graph | `entra_get_organization` | Entra ID | read | low | implemented | pending | no |
-| graph | `entra_get_service_principal` | Entra ID | read | medium | implemented | pending | no |
-| graph | `entra_get_sign_in_log` | Entra ID | read | medium | implemented | pending | no |
-| graph | `entra_get_user` | Entra ID | read | low | implemented | pending | no |
-| graph | `entra_list_applications` | Entra ID | read | medium | implemented | pending | no |
-| graph | `entra_list_auth_methods` | Entra ID | read | medium | implemented | pending | no |
-| graph | `entra_list_conditional_access_policies` | Entra ID | read | medium | implemented | pending | no |
-| graph | `entra_list_devices` | Entra ID | read | low | implemented | pending | no |
-| graph | `entra_list_directory_audits` | Entra ID | read | medium | implemented | pending | no |
-| graph | `entra_list_directory_roles` | Entra ID | read | medium | implemented | pending | no |
-| graph | `entra_list_domains` | Entra ID | read | low | implemented | pending | no |
-| graph | `entra_list_group_members` | Entra ID | read | low | implemented | pending | no |
-| graph | `entra_list_group_owners` | Entra ID | read | low | implemented | pending | no |
-| graph | `entra_list_groups` | Entra ID | read | low | implemented | pending | no |
-| graph | `entra_list_role_assignments` | Entra ID | read | medium | implemented | pending | no |
-| graph | `entra_list_role_definitions` | Entra ID | read | medium | implemented | pending | no |
-| graph | `entra_list_service_principals` | Entra ID | read | medium | implemented | pending | no |
-| graph | `entra_list_sign_in_logs` | Entra ID | read | medium | implemented | pending | no |
-| graph | `entra_list_users` | Entra ID | read | low | implemented | pending | no |
-| graph | `entra_mfa_registration_report` | Entra ID | read | medium | implemented | pending | no |
+| graph | `entra_get_application` | Entra ID | read | medium | implemented | approved | yes |
+| graph | `entra_get_conditional_access_policy` | Entra ID | read | medium | implemented | approved | yes |
+| graph | `entra_get_device` | Entra ID | read | low | implemented | approved | yes |
+| graph | `entra_get_group` | Entra ID | read | low | implemented | approved | yes |
+| graph | `entra_get_organization` | Entra ID | read | low | implemented | approved | yes |
+| graph | `entra_get_service_principal` | Entra ID | read | medium | implemented | approved | yes |
+| graph | `entra_get_sign_in_log` | Entra ID | read | medium | implemented | approved | yes |
+| graph | `entra_get_user` | Entra ID | read | low | implemented | approved | yes |
+| graph | `entra_list_applications` | Entra ID | read | medium | implemented | approved | yes |
+| graph | `entra_list_auth_methods` | Entra ID | read | medium | implemented | approved | yes |
+| graph | `entra_list_conditional_access_policies` | Entra ID | read | medium | implemented | approved | yes |
+| graph | `entra_list_devices` | Entra ID | read | low | implemented | approved | yes |
+| graph | `entra_list_directory_audits` | Entra ID | read | medium | implemented | approved | yes |
+| graph | `entra_list_directory_roles` | Entra ID | read | medium | implemented | approved | yes |
+| graph | `entra_list_domains` | Entra ID | read | low | implemented | approved | yes |
+| graph | `entra_list_group_members` | Entra ID | read | low | implemented | approved | yes |
+| graph | `entra_list_group_owners` | Entra ID | read | low | implemented | approved | yes |
+| graph | `entra_list_groups` | Entra ID | read | low | implemented | approved | yes |
+| graph | `entra_list_role_assignments` | Entra ID | read | medium | implemented | approved | yes |
+| graph | `entra_list_role_definitions` | Entra ID | read | medium | implemented | approved | yes |
+| graph | `entra_list_service_principals` | Entra ID | read | medium | implemented | approved | yes |
+| graph | `entra_list_sign_in_logs` | Entra ID | read | medium | implemented | approved | yes |
+| graph | `entra_list_users` | Entra ID | read | low | implemented | approved | yes |
+| graph | `entra_mfa_registration_report` | Entra ID | read | medium | implemented | approved | yes |
 | graph | `entra_remove_directory_role_assignment` | Entra ID | write | critical | implemented | pending | no |
 | graph | `entra_remove_group_member` | Entra ID | write | high | implemented | pending | no |
 | graph | `entra_update_application` | Entra ID | write | high | implemented | pending | no |
@@ -73,32 +73,32 @@ Total actions: 298
 | graph | `intune_delete_managed_device` | Intune | write | critical | implemented | pending | no |
 | graph | `intune_delete_quality_update_policy` | Intune | write | critical | implemented | pending | no |
 | graph | `intune_delete_settings_catalog_policy` | Intune | write | critical | implemented | pending | no |
-| graph | `intune_get_app` | Intune | read | low | implemented | pending | no |
-| graph | `intune_get_autopilot_device` | Intune | read | low | implemented | pending | no |
-| graph | `intune_get_autopilot_profile` | Intune | read | low | implemented | pending | no |
-| graph | `intune_get_compliance_policy` | Intune | read | low | implemented | pending | no |
-| graph | `intune_get_device_configuration` | Intune | read | low | implemented | pending | no |
-| graph | `intune_get_enrollment_configuration` | Intune | read | low | implemented | pending | no |
-| graph | `intune_get_managed_device` | Intune | read | low | implemented | pending | no |
-| graph | `intune_get_managed_device_overview` | Intune | read | low | implemented | pending | no |
-| graph | `intune_get_quality_update_policy` | Intune | read | low | implemented | pending | no |
-| graph | `intune_get_settings_catalog_policy` | Intune | read | low | implemented | pending | no |
+| graph | `intune_get_app` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_get_autopilot_device` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_get_autopilot_profile` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_get_compliance_policy` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_get_device_configuration` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_get_enrollment_configuration` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_get_managed_device` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_get_managed_device_overview` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_get_quality_update_policy` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_get_settings_catalog_policy` | Intune | read | low | implemented | approved | yes |
 | graph | `intune_import_autopilot_device` | Intune | write | high | implemented | pending | no |
-| graph | `intune_list_app_device_statuses` | Intune | read | low | implemented | pending | no |
-| graph | `intune_list_apps` | Intune | read | low | implemented | pending | no |
-| graph | `intune_list_autopilot_devices` | Intune | read | low | implemented | pending | no |
-| graph | `intune_list_autopilot_profiles` | Intune | read | low | implemented | pending | no |
-| graph | `intune_list_compliance_assignments` | Intune | read | low | implemented | pending | no |
-| graph | `intune_list_compliance_policies` | Intune | read | low | implemented | pending | no |
-| graph | `intune_list_configuration_assignments` | Intune | read | low | implemented | pending | no |
-| graph | `intune_list_detected_apps` | Intune | read | low | implemented | pending | no |
-| graph | `intune_list_device_categories` | Intune | read | low | implemented | pending | no |
-| graph | `intune_list_device_configurations` | Intune | read | low | implemented | pending | no |
-| graph | `intune_list_enrollment_configurations` | Intune | read | low | implemented | pending | no |
-| graph | `intune_list_feature_update_profiles` | Intune | read | low | implemented | pending | no |
-| graph | `intune_list_managed_devices` | Intune | read | low | implemented | pending | no |
-| graph | `intune_list_quality_update_policies` | Intune | read | low | implemented | pending | no |
-| graph | `intune_list_settings_catalog_policies` | Intune | read | low | implemented | pending | no |
+| graph | `intune_list_app_device_statuses` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_list_apps` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_list_autopilot_devices` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_list_autopilot_profiles` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_list_compliance_assignments` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_list_compliance_policies` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_list_configuration_assignments` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_list_detected_apps` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_list_device_categories` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_list_device_configurations` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_list_enrollment_configurations` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_list_feature_update_profiles` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_list_managed_devices` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_list_quality_update_policies` | Intune | read | low | implemented | approved | yes |
+| graph | `intune_list_settings_catalog_policies` | Intune | read | low | implemented | approved | yes |
 | graph | `intune_locate_device` | Intune | write | high | implemented | pending | no |
 | graph | `intune_reboot_device` | Intune | write | high | implemented | pending | no |
 | graph | `intune_remote_lock_device` | Intune | write | high | implemented | pending | no |
@@ -115,58 +115,58 @@ Total actions: 298
 | graph | `intune_update_quality_update_policy` | Intune | write | high | implemented | pending | no |
 | graph | `intune_update_settings_catalog_policy` | Intune | write | high | implemented | pending | no |
 | graph | `intune_wipe_device` | Intune | write | critical | implemented | pending | no |
-| graph | `m365_email_activity_user_detail` | Microsoft 365 | read | low | implemented | pending | no |
-| graph | `m365_get_message_center_post` | Microsoft 365 | read | medium | implemented | pending | no |
-| graph | `m365_get_service_health` | Microsoft 365 | read | medium | implemented | pending | no |
-| graph | `m365_get_service_issue` | Microsoft 365 | read | medium | implemented | pending | no |
-| graph | `m365_get_user_license_details` | Microsoft 365 | read | low | implemented | pending | no |
-| graph | `m365_list_message_center` | Microsoft 365 | read | medium | implemented | pending | no |
-| graph | `m365_list_service_health` | Microsoft 365 | read | medium | implemented | pending | no |
-| graph | `m365_list_service_issues` | Microsoft 365 | read | medium | implemented | pending | no |
-| graph | `m365_list_subscribed_skus` | Microsoft 365 | read | low | implemented | pending | no |
-| graph | `m365_mailbox_usage_counts` | Microsoft 365 | read | low | implemented | pending | no |
-| graph | `m365_mailbox_usage_detail` | Microsoft 365 | read | low | implemented | pending | no |
-| graph | `m365_office_active_user_counts` | Microsoft 365 | read | low | implemented | pending | no |
-| graph | `m365_office_active_user_detail` | Microsoft 365 | read | low | implemented | pending | no |
-| graph | `m365_onedrive_activity_user_detail` | Microsoft 365 | read | low | implemented | pending | no |
-| graph | `m365_onedrive_usage_account_detail` | Microsoft 365 | read | low | implemented | pending | no |
-| graph | `m365_sharepoint_site_usage_detail` | Microsoft 365 | read | low | implemented | pending | no |
-| graph | `m365_sharepoint_site_usage_storage` | Microsoft 365 | read | low | implemented | pending | no |
-| graph | `m365_teams_device_usage_distribution` | Microsoft 365 | read | low | implemented | pending | no |
-| graph | `m365_teams_user_activity_detail` | Microsoft 365 | read | low | implemented | pending | no |
+| graph | `m365_email_activity_user_detail` | Microsoft 365 | read | low | implemented | approved | yes |
+| graph | `m365_get_message_center_post` | Microsoft 365 | read | medium | implemented | approved | yes |
+| graph | `m365_get_service_health` | Microsoft 365 | read | medium | implemented | approved | yes |
+| graph | `m365_get_service_issue` | Microsoft 365 | read | medium | implemented | approved | yes |
+| graph | `m365_get_user_license_details` | Microsoft 365 | read | low | implemented | approved | yes |
+| graph | `m365_list_message_center` | Microsoft 365 | read | medium | implemented | approved | yes |
+| graph | `m365_list_service_health` | Microsoft 365 | read | medium | implemented | approved | yes |
+| graph | `m365_list_service_issues` | Microsoft 365 | read | medium | implemented | approved | yes |
+| graph | `m365_list_subscribed_skus` | Microsoft 365 | read | low | implemented | approved | yes |
+| graph | `m365_mailbox_usage_counts` | Microsoft 365 | read | low | implemented | approved | yes |
+| graph | `m365_mailbox_usage_detail` | Microsoft 365 | read | low | implemented | approved | yes |
+| graph | `m365_office_active_user_counts` | Microsoft 365 | read | low | implemented | approved | yes |
+| graph | `m365_office_active_user_detail` | Microsoft 365 | read | low | implemented | approved | yes |
+| graph | `m365_onedrive_activity_user_detail` | Microsoft 365 | read | low | implemented | approved | yes |
+| graph | `m365_onedrive_usage_account_detail` | Microsoft 365 | read | low | implemented | approved | yes |
+| graph | `m365_sharepoint_site_usage_detail` | Microsoft 365 | read | low | implemented | approved | yes |
+| graph | `m365_sharepoint_site_usage_storage` | Microsoft 365 | read | low | implemented | approved | yes |
+| graph | `m365_teams_device_usage_distribution` | Microsoft 365 | read | low | implemented | approved | yes |
+| graph | `m365_teams_user_activity_detail` | Microsoft 365 | read | low | implemented | approved | yes |
 | graph | `teams_add_member` | Microsoft Teams | write | high | implemented | pending | no |
 | graph | `teams_create_channel` | Microsoft Teams | write | medium | implemented | pending | no |
 | graph | `teams_create_online_meeting` | Microsoft Teams | write | medium | implemented | pending | no |
 | graph | `teams_delete_channel` | Microsoft Teams | write | critical | implemented | pending | no |
 | graph | `teams_delete_online_meeting` | Microsoft Teams | write | high | implemented | pending | no |
-| graph | `teams_get_channel` | Microsoft Teams | read | low | implemented | pending | no |
-| graph | `teams_get_online_meeting` | Microsoft Teams | read | low | implemented | pending | no |
-| graph | `teams_get_team` | Microsoft Teams | read | low | implemented | pending | no |
-| graph | `teams_list_channels` | Microsoft Teams | read | low | implemented | pending | no |
-| graph | `teams_list_installed_apps` | Microsoft Teams | read | low | implemented | pending | no |
-| graph | `teams_list_members` | Microsoft Teams | read | low | implemented | pending | no |
-| graph | `teams_list_online_meetings` | Microsoft Teams | read | low | implemented | pending | no |
-| graph | `teams_list_teams` | Microsoft Teams | read | low | implemented | pending | no |
+| graph | `teams_get_channel` | Microsoft Teams | read | low | implemented | approved | yes |
+| graph | `teams_get_online_meeting` | Microsoft Teams | read | low | implemented | approved | yes |
+| graph | `teams_get_team` | Microsoft Teams | read | low | implemented | approved | yes |
+| graph | `teams_list_channels` | Microsoft Teams | read | low | implemented | approved | yes |
+| graph | `teams_list_installed_apps` | Microsoft Teams | read | low | implemented | approved | yes |
+| graph | `teams_list_members` | Microsoft Teams | read | low | implemented | approved | yes |
+| graph | `teams_list_online_meetings` | Microsoft Teams | read | low | implemented | approved | yes |
+| graph | `teams_list_teams` | Microsoft Teams | read | low | implemented | approved | yes |
 | graph | `teams_remove_member` | Microsoft Teams | write | high | implemented | pending | no |
 | graph | `teams_update_channel` | Microsoft Teams | write | medium | implemented | pending | no |
 | graph | `onedrive_create_sharing_link` | OneDrive | write | high | implemented | pending | no |
 | graph | `onedrive_delete_item_permission` | OneDrive | write | high | implemented | pending | no |
-| graph | `onedrive_get_item` | OneDrive | read | low | implemented | pending | no |
-| graph | `onedrive_get_quota` | OneDrive | read | low | implemented | pending | no |
-| graph | `onedrive_get_user_drive` | OneDrive | read | low | implemented | pending | no |
-| graph | `onedrive_list_item_permissions` | OneDrive | read | medium | implemented | pending | no |
-| graph | `onedrive_list_root_children` | OneDrive | read | low | implemented | pending | no |
+| graph | `onedrive_get_item` | OneDrive | read | low | implemented | approved | yes |
+| graph | `onedrive_get_quota` | OneDrive | read | low | implemented | approved | yes |
+| graph | `onedrive_get_user_drive` | OneDrive | read | low | implemented | approved | yes |
+| graph | `onedrive_list_item_permissions` | OneDrive | read | medium | implemented | approved | yes |
+| graph | `onedrive_list_root_children` | OneDrive | read | low | implemented | approved | yes |
 | graph | `security_confirm_user_compromised` | Security & Compliance | write | critical | implemented | pending | no |
 | graph | `security_dismiss_risky_user` | Security & Compliance | write | high | implemented | pending | no |
-| graph | `security_get_alert_v2` | Security & Compliance | read | medium | implemented | pending | no |
-| graph | `security_get_incident` | Security & Compliance | read | medium | implemented | pending | no |
-| graph | `security_get_risky_user` | Security & Compliance | read | medium | implemented | pending | no |
-| graph | `security_list_alerts_v2` | Security & Compliance | read | medium | implemented | pending | no |
-| graph | `security_list_incidents` | Security & Compliance | read | medium | implemented | pending | no |
-| graph | `security_list_risk_detections` | Security & Compliance | read | medium | implemented | pending | no |
-| graph | `security_list_risky_users` | Security & Compliance | read | medium | implemented | pending | no |
-| graph | `security_list_secure_score_controls` | Security & Compliance | read | medium | implemented | pending | no |
-| graph | `security_list_secure_scores` | Security & Compliance | read | medium | implemented | pending | no |
+| graph | `security_get_alert_v2` | Security & Compliance | read | medium | implemented | approved | yes |
+| graph | `security_get_incident` | Security & Compliance | read | medium | implemented | approved | yes |
+| graph | `security_get_risky_user` | Security & Compliance | read | medium | implemented | approved | yes |
+| graph | `security_list_alerts_v2` | Security & Compliance | read | medium | implemented | approved | yes |
+| graph | `security_list_incidents` | Security & Compliance | read | medium | implemented | approved | yes |
+| graph | `security_list_risk_detections` | Security & Compliance | read | medium | implemented | approved | yes |
+| graph | `security_list_risky_users` | Security & Compliance | read | medium | implemented | approved | yes |
+| graph | `security_list_secure_score_controls` | Security & Compliance | read | medium | implemented | approved | yes |
+| graph | `security_list_secure_scores` | Security & Compliance | read | medium | implemented | approved | yes |
 | graph | `security_update_alert_v2` | Security & Compliance | write | high | implemented | pending | no |
 | graph | `security_update_incident` | Security & Compliance | write | high | implemented | pending | no |
 | graph | `sharepoint_create_list` | SharePoint Online | write | medium | implemented | pending | no |
@@ -175,16 +175,16 @@ Total actions: 298
 | graph | `sharepoint_delete_item_permission` | SharePoint Online | write | high | implemented | pending | no |
 | graph | `sharepoint_delete_list` | SharePoint Online | write | critical | implemented | pending | no |
 | graph | `sharepoint_delete_list_item` | SharePoint Online | write | high | implemented | pending | no |
-| graph | `sharepoint_get_drive_item` | SharePoint Online | read | low | implemented | pending | no |
-| graph | `sharepoint_get_list` | SharePoint Online | read | low | implemented | pending | no |
-| graph | `sharepoint_get_list_item` | SharePoint Online | read | low | implemented | pending | no |
-| graph | `sharepoint_get_site` | SharePoint Online | read | low | implemented | pending | no |
-| graph | `sharepoint_get_site_drive` | SharePoint Online | read | low | implemented | pending | no |
-| graph | `sharepoint_list_drive_items` | SharePoint Online | read | low | implemented | pending | no |
-| graph | `sharepoint_list_item_permissions` | SharePoint Online | read | medium | implemented | pending | no |
-| graph | `sharepoint_list_items` | SharePoint Online | read | low | implemented | pending | no |
-| graph | `sharepoint_list_lists` | SharePoint Online | read | low | implemented | pending | no |
-| graph | `sharepoint_list_sites` | SharePoint Online | read | low | implemented | pending | no |
+| graph | `sharepoint_get_drive_item` | SharePoint Online | read | low | implemented | approved | yes |
+| graph | `sharepoint_get_list` | SharePoint Online | read | low | implemented | approved | yes |
+| graph | `sharepoint_get_list_item` | SharePoint Online | read | low | implemented | approved | yes |
+| graph | `sharepoint_get_site` | SharePoint Online | read | low | implemented | approved | yes |
+| graph | `sharepoint_get_site_drive` | SharePoint Online | read | low | implemented | approved | yes |
+| graph | `sharepoint_list_drive_items` | SharePoint Online | read | low | implemented | approved | yes |
+| graph | `sharepoint_list_item_permissions` | SharePoint Online | read | medium | implemented | approved | yes |
+| graph | `sharepoint_list_items` | SharePoint Online | read | low | implemented | approved | yes |
+| graph | `sharepoint_list_lists` | SharePoint Online | read | low | implemented | approved | yes |
+| graph | `sharepoint_list_sites` | SharePoint Online | read | low | implemented | approved | yes |
 | graph | `sharepoint_update_list` | SharePoint Online | write | medium | implemented | pending | no |
 | graph | `sharepoint_update_list_item` | SharePoint Online | write | medium | implemented | pending | no |
 | powershell | `add_distribution_group_member` | Exchange Online | write | medium | implemented | pending | no |
@@ -203,36 +203,36 @@ Total actions: 298
 | powershell | `delete_unified_group` | Exchange Online | write | critical | unsupported | pending | no |
 | powershell | `disable_transport_rule` | Exchange Online | write | high | implemented | pending | no |
 | powershell | `enable_transport_rule` | Exchange Online | write | high | implemented | pending | no |
-| powershell | `get_antiphishing_policy` | Exchange Online | read | medium | implemented | pending | no |
-| powershell | `get_calendar_processing` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `get_distribution_group` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `get_distribution_group_members` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `get_exchange_mailbox` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `get_exchange_mailbox_folder_statistics` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `get_exchange_mailbox_statistics` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `get_exchange_recipient` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `get_hosted_content_filter_policy` | Exchange Online | read | medium | implemented | pending | no |
-| powershell | `get_mail_contact` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `get_mail_user` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `get_mailbox_auto_reply_configuration` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `get_mailbox_folder_permissions` | Exchange Online | read | medium | implemented | pending | no |
-| powershell | `get_mailbox_permissions` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `get_malware_filter_policy` | Exchange Online | read | medium | implemented | pending | no |
-| powershell | `get_message_trace_detail` | Exchange Online | read | medium | implemented | pending | no |
-| powershell | `get_organization_config` | Exchange Online | read | medium | implemented | pending | no |
-| powershell | `get_outbound_connector` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `get_remote_domain` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `get_send_as_permissions` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `get_transport_config` | Exchange Online | read | medium | implemented | pending | no |
-| powershell | `get_unified_group` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `list_accepted_domains` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `list_distribution_groups` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `list_exchange_mailboxes` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `list_inbound_connectors` | Exchange Online | read | medium | implemented | pending | no |
-| powershell | `list_mobile_devices` | Exchange Online | read | medium | implemented | pending | no |
-| powershell | `list_quarantine_messages` | Exchange Online | read | medium | implemented | pending | no |
-| powershell | `list_transport_rules` | Exchange Online | read | low | implemented | pending | no |
-| powershell | `preview_quarantine_message` | Exchange Online | read | medium | implemented | pending | no |
+| powershell | `get_antiphishing_policy` | Exchange Online | read | medium | implemented | approved | yes |
+| powershell | `get_calendar_processing` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `get_distribution_group` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `get_distribution_group_members` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `get_exchange_mailbox` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `get_exchange_mailbox_folder_statistics` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `get_exchange_mailbox_statistics` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `get_exchange_recipient` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `get_hosted_content_filter_policy` | Exchange Online | read | medium | implemented | approved | yes |
+| powershell | `get_mail_contact` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `get_mail_user` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `get_mailbox_auto_reply_configuration` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `get_mailbox_folder_permissions` | Exchange Online | read | medium | implemented | approved | yes |
+| powershell | `get_mailbox_permissions` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `get_malware_filter_policy` | Exchange Online | read | medium | implemented | approved | yes |
+| powershell | `get_message_trace_detail` | Exchange Online | read | medium | implemented | approved | yes |
+| powershell | `get_organization_config` | Exchange Online | read | medium | implemented | approved | yes |
+| powershell | `get_outbound_connector` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `get_remote_domain` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `get_send_as_permissions` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `get_transport_config` | Exchange Online | read | medium | implemented | approved | yes |
+| powershell | `get_unified_group` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `list_accepted_domains` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `list_distribution_groups` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `list_exchange_mailboxes` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `list_inbound_connectors` | Exchange Online | read | medium | implemented | approved | yes |
+| powershell | `list_mobile_devices` | Exchange Online | read | medium | implemented | approved | yes |
+| powershell | `list_quarantine_messages` | Exchange Online | read | medium | implemented | approved | yes |
+| powershell | `list_transport_rules` | Exchange Online | read | low | implemented | approved | yes |
+| powershell | `preview_quarantine_message` | Exchange Online | read | medium | implemented | approved | yes |
 | powershell | `release_quarantine_message` | Exchange Online | write | high | implemented | pending | no |
 | powershell | `remove_distribution_group_member` | Exchange Online | write | medium | implemented | pending | no |
 | powershell | `remove_mailbox_folder_permission` | Exchange Online | write | high | implemented | pending | no |
@@ -241,7 +241,7 @@ Total actions: 298
 | powershell | `remove_send_as_permission` | Exchange Online | write | high | implemented | pending | no |
 | powershell | `remove_transport_rule` | Exchange Online | write | critical | implemented | pending | no |
 | powershell | `remove_unified_group_member` | Exchange Online | write | high | unsupported | pending | no |
-| powershell | `search_exchange_admin_audit_log` | Exchange Online | read | medium | implemented | pending | no |
+| powershell | `search_exchange_admin_audit_log` | Exchange Online | read | medium | implemented | approved | yes |
 | powershell | `set_accepted_domain_type` | Exchange Online | write | high | implemented | pending | no |
 | powershell | `set_distribution_group_sender_authentication` | Exchange Online | write | medium | implemented | pending | no |
 | powershell | `set_inbound_connector_enabled` | Exchange Online | write | high | implemented | pending | no |
@@ -254,53 +254,53 @@ Total actions: 298
 | powershell | `set_room_mailbox_booking_window` | Exchange Online | write | medium | implemented | pending | no |
 | powershell | `set_transport_rule_comments` | Exchange Online | write | medium | implemented | pending | no |
 | powershell | `set_unified_group_description` | Exchange Online | write | medium | implemented | pending | no |
-| powershell | `trace_exchange_messages` | Exchange Online | read | medium | implemented | pending | no |
+| powershell | `trace_exchange_messages` | Exchange Online | read | medium | implemented | approved | yes |
 | powershell | `wipe_mobile_device` | Exchange Online | write | critical | implemented | pending | no |
 | powershell | `add_teams_team_member` | Microsoft Teams | write | high | implemented | pending | no |
 | powershell | `create_teams_channel` | Microsoft Teams | write | high | planned | pending | no |
 | powershell | `create_teams_team` | Microsoft Teams | write | high | planned | pending | no |
-| powershell | `get_teams_calling_policy` | Microsoft Teams | read | low | implemented | pending | no |
-| powershell | `get_teams_meeting_policy` | Microsoft Teams | read | low | implemented | pending | no |
-| powershell | `get_teams_messaging_policy` | Microsoft Teams | read | low | implemented | pending | no |
-| powershell | `get_teams_online_user` | Microsoft Teams | read | low | implemented | pending | no |
-| powershell | `get_teams_team` | Microsoft Teams | read | low | implemented | pending | no |
-| powershell | `get_teams_tenant` | Microsoft Teams | read | medium | implemented | pending | no |
+| powershell | `get_teams_calling_policy` | Microsoft Teams | read | low | implemented | approved | yes |
+| powershell | `get_teams_meeting_policy` | Microsoft Teams | read | low | implemented | approved | yes |
+| powershell | `get_teams_messaging_policy` | Microsoft Teams | read | low | implemented | approved | yes |
+| powershell | `get_teams_online_user` | Microsoft Teams | read | low | implemented | approved | yes |
+| powershell | `get_teams_team` | Microsoft Teams | read | low | implemented | approved | yes |
+| powershell | `get_teams_tenant` | Microsoft Teams | read | medium | implemented | approved | yes |
 | powershell | `grant_teams_app_permission_policy` | Microsoft Teams | write | high | implemented | pending | no |
 | powershell | `grant_teams_app_setup_policy` | Microsoft Teams | write | high | implemented | pending | no |
 | powershell | `grant_teams_calling_policy` | Microsoft Teams | write | high | implemented | pending | no |
 | powershell | `grant_teams_meeting_policy` | Microsoft Teams | write | high | implemented | pending | no |
 | powershell | `grant_teams_messaging_policy` | Microsoft Teams | write | high | implemented | pending | no |
-| powershell | `list_teams_app_permission_policies` | Microsoft Teams | read | low | implemented | pending | no |
-| powershell | `list_teams_app_setup_policies` | Microsoft Teams | read | low | implemented | pending | no |
-| powershell | `list_teams_calling_policies` | Microsoft Teams | read | low | implemented | pending | no |
-| powershell | `list_teams_meeting_policies` | Microsoft Teams | read | low | implemented | pending | no |
-| powershell | `list_teams_messaging_policies` | Microsoft Teams | read | low | implemented | pending | no |
-| powershell | `list_teams_team_channels` | Microsoft Teams | read | low | implemented | pending | no |
-| powershell | `list_teams_team_members` | Microsoft Teams | read | low | implemented | pending | no |
+| powershell | `list_teams_app_permission_policies` | Microsoft Teams | read | low | implemented | approved | yes |
+| powershell | `list_teams_app_setup_policies` | Microsoft Teams | read | low | implemented | approved | yes |
+| powershell | `list_teams_calling_policies` | Microsoft Teams | read | low | implemented | approved | yes |
+| powershell | `list_teams_meeting_policies` | Microsoft Teams | read | low | implemented | approved | yes |
+| powershell | `list_teams_messaging_policies` | Microsoft Teams | read | low | implemented | approved | yes |
+| powershell | `list_teams_team_channels` | Microsoft Teams | read | low | implemented | approved | yes |
+| powershell | `list_teams_team_members` | Microsoft Teams | read | low | implemented | approved | yes |
 | powershell | `remove_teams_team_member` | Microsoft Teams | write | high | implemented | pending | no |
 | powershell | `set_teams_meeting_anonymous_join` | Microsoft Teams | write | high | implemented | pending | no |
 | powershell | `set_teams_meeting_lobby` | Microsoft Teams | write | high | implemented | pending | no |
 | powershell | `set_teams_meeting_recording` | Microsoft Teams | write | high | implemented | pending | no |
 | powershell | `create_ediscovery_case_search` | Security & Compliance | write | high | unsupported | pending | no |
-| powershell | `get_compliance_tag` | Security & Compliance | read | medium | implemented | pending | no |
-| powershell | `get_dlp_compliance_policy` | Security & Compliance | read | low | implemented | pending | no |
-| powershell | `get_dlp_compliance_rule` | Security & Compliance | read | low | implemented | pending | no |
+| powershell | `get_compliance_tag` | Security & Compliance | read | medium | implemented | approved | yes |
+| powershell | `get_dlp_compliance_policy` | Security & Compliance | read | low | implemented | approved | yes |
+| powershell | `get_dlp_compliance_rule` | Security & Compliance | read | low | implemented | approved | yes |
 | powershell | `get_ediscovery_case_searches` | Security & Compliance | read | medium | unsupported | pending | no |
 | powershell | `get_ediscovery_search_actions` | Security & Compliance | read | medium | unsupported | pending | no |
-| powershell | `get_protection_alert` | Security & Compliance | read | medium | implemented | pending | no |
-| powershell | `get_retention_compliance_policy` | Security & Compliance | read | low | implemented | pending | no |
-| powershell | `get_retention_compliance_rule` | Security & Compliance | read | low | implemented | pending | no |
-| powershell | `get_safe_attachment_policy` | Security & Compliance | read | medium | implemented | pending | no |
-| powershell | `get_safe_links_policy` | Security & Compliance | read | medium | implemented | pending | no |
-| powershell | `search_unified_audit_log` | Security & Compliance | read | medium | implemented | pending | no |
+| powershell | `get_protection_alert` | Security & Compliance | read | medium | implemented | approved | yes |
+| powershell | `get_retention_compliance_policy` | Security & Compliance | read | low | implemented | approved | yes |
+| powershell | `get_retention_compliance_rule` | Security & Compliance | read | low | implemented | approved | yes |
+| powershell | `get_safe_attachment_policy` | Security & Compliance | read | medium | implemented | approved | yes |
+| powershell | `get_safe_links_policy` | Security & Compliance | read | medium | implemented | approved | yes |
+| powershell | `search_unified_audit_log` | Security & Compliance | read | medium | implemented | approved | yes |
 | powershell | `start_ediscovery_case_search` | Security & Compliance | write | high | unsupported | pending | no |
 | powershell | `create_sharepoint_site` | SharePoint Online | write | high | planned | pending | no |
 | powershell | `delete_sharepoint_site` | SharePoint Online | write | critical | planned | pending | no |
-| powershell | `get_sharepoint_tenant_app_catalog_url` | SharePoint Online | read | low | implemented | pending | no |
-| powershell | `get_sharepoint_tenant_settings` | SharePoint Online | read | low | implemented | pending | no |
-| powershell | `get_sharepoint_tenant_site` | SharePoint Online | read | low | implemented | pending | no |
-| powershell | `list_sharepoint_deleted_sites` | SharePoint Online | read | low | implemented | pending | no |
-| powershell | `list_sharepoint_tenant_sites` | SharePoint Online | read | medium | implemented | pending | no |
+| powershell | `get_sharepoint_tenant_app_catalog_url` | SharePoint Online | read | low | implemented | approved | yes |
+| powershell | `get_sharepoint_tenant_settings` | SharePoint Online | read | low | implemented | approved | yes |
+| powershell | `get_sharepoint_tenant_site` | SharePoint Online | read | low | implemented | approved | yes |
+| powershell | `list_sharepoint_deleted_sites` | SharePoint Online | read | low | implemented | approved | yes |
+| powershell | `list_sharepoint_tenant_sites` | SharePoint Online | read | medium | implemented | approved | yes |
 | powershell | `lock_sharepoint_site` | SharePoint Online | write | critical | implemented | pending | no |
 | powershell | `set_sharepoint_site_sharing` | SharePoint Online | write | high | implemented | pending | no |
 | powershell | `set_sharepoint_site_storage_quota` | SharePoint Online | write | medium | implemented | pending | no |

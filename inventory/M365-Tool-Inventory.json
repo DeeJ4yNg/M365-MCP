@@ -634,8 +634,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "application",
       "app registration"
@@ -657,12 +657,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -677,8 +676,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "conditional access",
       "policy"
@@ -700,12 +699,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -720,8 +718,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "device",
       "entra"
@@ -743,12 +741,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -763,8 +760,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "group",
       "detail"
@@ -794,12 +791,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -814,8 +810,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "organization",
       "tenant",
@@ -829,12 +825,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -849,8 +844,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "service principal",
       "enterprise app"
@@ -872,12 +867,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -892,8 +886,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "sign-in",
       "login",
@@ -916,12 +910,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -936,8 +929,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "user",
       "account",
@@ -968,12 +961,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -988,8 +980,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "application",
       "app registration",
@@ -1023,12 +1015,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -1043,8 +1034,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "mfa",
       "authentication",
@@ -1067,12 +1058,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -1087,8 +1077,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "conditional access",
       "policy",
@@ -1114,12 +1104,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -1134,8 +1123,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "device",
       "entra",
@@ -1169,12 +1158,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -1189,8 +1177,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "audit",
       "directory",
@@ -1211,12 +1199,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -1231,8 +1218,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "role",
       "admin",
@@ -1246,12 +1233,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -1266,8 +1252,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "domain",
       "tenant",
@@ -1281,12 +1267,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -1301,8 +1286,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "group",
       "member",
@@ -1339,12 +1324,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -1359,8 +1343,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "group",
       "owner"
@@ -1382,12 +1366,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -1402,8 +1385,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "group",
       "list",
@@ -1443,12 +1426,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -1463,8 +1445,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "role",
       "assignment",
@@ -1490,12 +1472,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -1510,8 +1491,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "role",
       "definition",
@@ -1525,12 +1506,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -1545,8 +1525,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "service principal",
       "enterprise app",
@@ -1580,12 +1560,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -1600,8 +1579,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "sign-in",
       "login",
@@ -1628,12 +1607,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -1648,8 +1626,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "user",
       "account",
@@ -1689,12 +1667,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -1709,8 +1686,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "mfa",
       "registration",
@@ -1736,12 +1713,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3070,8 +3046,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "application"
@@ -3093,12 +3069,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3113,8 +3088,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "autopilot",
@@ -3137,12 +3112,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3157,8 +3131,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "autopilot",
@@ -3181,12 +3155,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3201,8 +3174,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "compliance",
@@ -3225,12 +3198,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3245,8 +3217,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "configuration",
@@ -3269,12 +3241,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3289,8 +3260,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "enrollment"
@@ -3312,12 +3283,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3332,8 +3302,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "device",
@@ -3356,12 +3326,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3376,8 +3345,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "device",
@@ -3392,12 +3361,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3412,8 +3380,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "windows update",
@@ -3436,12 +3404,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3456,8 +3423,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "settings catalog"
@@ -3479,12 +3446,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3542,8 +3508,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "application",
@@ -3567,12 +3533,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3587,8 +3552,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "application",
@@ -3614,12 +3579,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3634,8 +3598,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "autopilot",
@@ -3657,12 +3621,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3677,8 +3640,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "autopilot",
@@ -3700,12 +3663,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3720,8 +3682,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "compliance",
@@ -3744,12 +3706,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3764,8 +3725,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "compliance",
@@ -3791,12 +3752,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3811,8 +3771,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "configuration",
@@ -3835,12 +3795,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3855,8 +3814,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "device",
@@ -3880,12 +3839,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3900,8 +3858,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "device",
@@ -3915,12 +3873,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3935,8 +3892,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "configuration",
@@ -3962,12 +3919,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -3982,8 +3938,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "enrollment",
@@ -4009,12 +3965,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -4029,8 +3984,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "windows update",
@@ -4051,12 +4006,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -4071,8 +4025,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "device",
@@ -4107,12 +4061,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -4127,8 +4080,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "windows update",
@@ -4149,12 +4102,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -4169,8 +4121,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "intune",
       "settings catalog",
@@ -4196,12 +4148,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -4956,8 +4907,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "report",
       "email",
@@ -4984,12 +4935,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5004,8 +4954,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "message center",
       "announcement"
@@ -5027,12 +4977,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5047,8 +4996,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "service health",
       "status"
@@ -5070,12 +5019,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5090,8 +5038,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "service health",
       "incident"
@@ -5113,12 +5061,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5133,8 +5080,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "license",
       "user",
@@ -5157,12 +5104,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5177,8 +5123,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "message center",
       "change",
@@ -5204,12 +5150,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5224,8 +5169,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "service health",
       "microsoft 365",
@@ -5239,12 +5184,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5259,8 +5203,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "service health",
       "incident",
@@ -5286,12 +5230,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5306,8 +5249,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "license",
       "sku",
@@ -5322,12 +5265,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5342,8 +5284,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "report",
       "mailbox",
@@ -5370,12 +5312,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5390,8 +5331,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "report",
       "mailbox",
@@ -5419,12 +5360,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5439,8 +5379,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "report",
       "usage",
@@ -5467,12 +5407,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5487,8 +5426,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "report",
       "usage",
@@ -5515,12 +5454,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5535,8 +5473,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "report",
       "onedrive",
@@ -5563,12 +5501,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5583,8 +5520,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "report",
       "onedrive",
@@ -5612,12 +5549,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5632,8 +5568,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "report",
       "sharepoint",
@@ -5661,12 +5597,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5681,8 +5616,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "report",
       "sharepoint",
@@ -5709,12 +5644,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5729,8 +5663,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "report",
       "teams",
@@ -5757,12 +5691,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -5777,8 +5710,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "report",
       "teams",
@@ -5806,12 +5739,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -6086,8 +6018,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "teams",
       "channel",
@@ -6117,12 +6049,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -6137,8 +6068,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "teams",
       "meeting",
@@ -6168,12 +6099,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -6188,8 +6118,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "teams",
       "team",
@@ -6212,12 +6142,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -6232,8 +6161,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "teams",
       "channel",
@@ -6256,12 +6185,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -6276,8 +6204,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "teams",
       "app",
@@ -6300,12 +6228,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -6320,8 +6247,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "teams",
       "member",
@@ -6344,12 +6271,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -6364,8 +6290,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "teams",
       "meeting",
@@ -6394,12 +6320,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -6414,8 +6339,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "teams",
       "team",
@@ -6429,12 +6354,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -6685,8 +6609,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "onedrive",
       "file",
@@ -6716,12 +6640,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -6736,8 +6659,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "onedrive",
       "quota",
@@ -6769,12 +6692,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -6789,8 +6711,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "onedrive",
       "drive",
@@ -6814,12 +6736,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -6834,8 +6755,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "onedrive",
       "permission",
@@ -6865,12 +6786,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -6885,8 +6805,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "onedrive",
       "file",
@@ -6924,12 +6844,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -7038,8 +6957,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "security",
       "alert",
@@ -7062,12 +6981,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -7082,8 +7000,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "security",
       "incident",
@@ -7106,12 +7024,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -7126,8 +7043,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "identity protection",
       "risky user"
@@ -7149,12 +7066,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -7169,8 +7085,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "security",
       "alert",
@@ -7197,12 +7113,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -7217,8 +7132,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "security",
       "incident",
@@ -7244,12 +7159,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -7264,8 +7178,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "identity protection",
       "risk detection"
@@ -7290,12 +7204,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -7310,8 +7223,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "identity protection",
       "risky user",
@@ -7337,12 +7250,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -7357,8 +7269,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "secure score",
       "control",
@@ -7372,12 +7284,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -7392,8 +7303,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "secure score",
       "security",
@@ -7414,12 +7325,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -7880,8 +7790,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "sharepoint",
       "file",
@@ -7911,12 +7821,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -7931,8 +7840,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "sharepoint",
       "list",
@@ -7962,12 +7871,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -7982,8 +7890,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "sharepoint",
       "list",
@@ -8029,12 +7937,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -8049,8 +7956,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "sharepoint",
       "site",
@@ -8073,12 +7980,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -8093,8 +7999,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "sharepoint",
       "drive",
@@ -8118,12 +8024,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -8138,8 +8043,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "sharepoint",
       "file",
@@ -8184,12 +8089,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -8204,8 +8108,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "sharepoint",
       "permission",
@@ -8235,12 +8139,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -8255,8 +8158,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "sharepoint",
       "list",
@@ -8305,12 +8208,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -8325,8 +8227,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "sharepoint",
       "list",
@@ -8363,12 +8265,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -8383,8 +8284,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "sharepoint",
       "site",
@@ -8421,12 +8322,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "graph",
@@ -9424,8 +9324,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "get",
       "antiphishing",
@@ -9439,12 +9339,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -9460,8 +9359,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "calendar",
@@ -9485,12 +9384,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -9506,8 +9404,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "distribution group",
@@ -9530,12 +9428,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -9551,8 +9448,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "distribution group",
@@ -9582,12 +9479,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -9603,8 +9499,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "mailbox",
@@ -9627,12 +9523,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -9648,8 +9543,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "mailbox",
@@ -9673,12 +9568,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -9694,8 +9588,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "mailbox",
@@ -9719,12 +9613,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -9740,8 +9633,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "recipient",
@@ -9764,12 +9657,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -9785,8 +9677,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "get",
       "hosted",
@@ -9802,12 +9694,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -9823,8 +9714,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "mail contact",
@@ -9847,12 +9738,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -9868,8 +9758,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "mail user",
@@ -9892,12 +9782,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -9913,8 +9802,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "mailbox",
@@ -9938,12 +9827,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -9959,8 +9847,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "get",
       "mailbox",
@@ -9984,12 +9872,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10005,8 +9892,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "mailbox",
@@ -10030,12 +9917,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10051,8 +9937,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "get",
       "malware",
@@ -10067,12 +9953,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10088,8 +9973,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "get",
       "message",
@@ -10120,12 +10005,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10141,8 +10025,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "get",
       "organization",
@@ -10156,12 +10040,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10177,8 +10060,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "outbound connector",
@@ -10201,12 +10084,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10222,8 +10104,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "remote domain",
@@ -10246,12 +10128,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10267,8 +10148,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "send as",
@@ -10292,12 +10173,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10313,8 +10193,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "get",
       "transport",
@@ -10328,12 +10208,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10349,8 +10228,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "microsoft 365 group",
@@ -10373,12 +10252,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10394,8 +10272,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "accepted domain",
@@ -10408,12 +10286,11 @@
       "properties": {}
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10429,8 +10306,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "distribution group",
@@ -10453,12 +10330,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10474,8 +10350,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "mailbox",
@@ -10499,12 +10375,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10520,8 +10395,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "list",
       "inbound",
@@ -10535,12 +10410,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10556,8 +10430,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "list",
       "mobile",
@@ -10571,12 +10445,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10592,8 +10465,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "quarantine",
@@ -10635,12 +10508,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10656,8 +10528,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "transport rule",
@@ -10670,12 +10542,11 @@
       "properties": {}
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -10691,8 +10562,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "quarantine",
@@ -10716,12 +10587,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -11155,8 +11025,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "admin audit log",
@@ -11214,12 +11084,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -11892,8 +11761,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "exchange",
       "message trace",
@@ -11941,12 +11810,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -12205,8 +12073,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "get",
       "calling",
@@ -12229,12 +12097,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -12256,8 +12123,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "get",
       "meeting",
@@ -12280,12 +12147,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -12307,8 +12173,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "get",
       "messaging",
@@ -12331,12 +12197,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -12352,8 +12217,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "teams",
       "online user",
@@ -12377,12 +12242,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -12397,8 +12261,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "teams",
       "team",
@@ -12421,12 +12285,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -12448,8 +12311,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "get",
       "tenant"
@@ -12462,12 +12325,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -12781,8 +12643,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "list",
       "app",
@@ -12797,12 +12659,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -12824,8 +12685,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "list",
       "app",
@@ -12840,12 +12701,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -12867,8 +12727,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "list",
       "calling",
@@ -12882,12 +12742,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -12909,8 +12768,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "list",
       "meeting",
@@ -12924,12 +12783,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -12951,8 +12809,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "list",
       "messaging",
@@ -12966,12 +12824,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -12987,8 +12844,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "teams",
       "team",
@@ -13020,12 +12877,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -13040,8 +12896,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "teams",
       "team",
@@ -13073,12 +12929,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -13399,8 +13254,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "get",
       "compliance",
@@ -13414,12 +13269,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -13435,8 +13289,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "purview",
       "dlp",
@@ -13460,12 +13314,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -13481,8 +13334,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "purview",
       "dlp",
@@ -13506,12 +13359,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -13621,8 +13473,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "get",
       "protection",
@@ -13636,12 +13488,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -13657,8 +13508,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "purview",
       "retention",
@@ -13682,12 +13533,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -13703,8 +13553,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "purview",
       "retention",
@@ -13728,12 +13578,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -13749,8 +13598,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "get",
       "safe",
@@ -13765,12 +13614,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -13786,8 +13634,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "get",
       "safe",
@@ -13802,12 +13650,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -13823,8 +13670,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "search",
       "unified",
@@ -13878,12 +13725,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -14060,8 +13906,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "get",
       "tenant",
@@ -14077,12 +13923,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -14097,8 +13942,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "sharepoint",
       "tenant",
@@ -14112,12 +13957,11 @@
       "properties": {}
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -14132,8 +13976,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "sharepoint",
       "tenant site",
@@ -14157,12 +14001,11 @@
       ]
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -14177,8 +14020,8 @@
     "operation_type": "read",
     "risk_level": "low",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "sharepoint",
       "deleted sites",
@@ -14192,12 +14035,11 @@
       "properties": {}
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
@@ -14213,8 +14055,8 @@
     "operation_type": "read",
     "risk_level": "medium",
     "implementation_status": "implemented",
-    "review_status": "pending",
-    "enabled": false,
+    "review_status": "approved",
+    "enabled": true,
     "keywords": [
       "list",
       "tenant",
@@ -14233,12 +14075,11 @@
       "required": []
     },
     "review": {
-      "status": "pending",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "evidence": null
-    },
-    "disabled_reason": "Review status is pending; approval is required."
+      "status": "approved",
+      "reviewed_by": "DeeJ4yNg",
+      "reviewed_at": "2026-11-02T14:00:17.350600Z",
+      "evidence": "OWNER-APPROVED: bulk read-only enablement for Agent onboarding (2026-11-02)"
+    }
   },
   {
     "server": "powershell",
